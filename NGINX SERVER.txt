@@ -1,0 +1,31 @@
+             
+
+                                 HOW TO DEPLOY NGNX SERVER
+
+
+
+  1)     sudo apt-get update
+sudo apt-get install nginx
+
+
+
+2)  Nginx registers itself as a service with ufw, our firewall, upon installation
+
+sudo ufw app list
+
+3)  sudo ufw allow 'Nginx HTTP'
+
+4)  sudo ufw status
+
+
+5)  systemctl status nginx
+
+     HOW TO STOP NGINX SERVER
+
+
+sudo systemctl stop nginx
+
+sudo systemctl start nginx
+
+
+ 

@@ -1,0 +1,2 @@
+chage the defalut port number of nexus
+vi nexus-defalut.properties

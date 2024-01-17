@@ -1,0 +1,28 @@
+closter planing
+
+
+3 enviroment      dev     test      production  
+
+2)   how many exicting data you have it   and the calculte  total data of your closter
+
+3 )  30 persentage use os activity
+
+4) how many data daily engention size
+
+
+5) what  is your  resitionm perpod
+6) how many job submisin
+
+7) daily basic use 1 GB   1x3  3 replication factor
+
+8)  what type of os choice 
+
+9) if he cloud enviroment  than aws azure gcp  feature
+
+production enviroment   
+
+30 node
+110 GB ram
+16 cores cpu
+
+2 master   256

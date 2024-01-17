@@ -1,0 +1,88 @@
+  
+                                   HADOOP
+
+
+Three type of data
+
+struture data
+unstrutre data
+semi struture
+
+
+struture data bank data 
+semi ttruture data pdf book
+unatrurw data  wallmart image video audio
+
+
+3 TYPE OF COMPAY IN market hadoop
+
+
+HDP 
+
+cloudera 
+
+mapr
+
+clod company ne bhi apna hadoop banaya
+
+microsoft    hd insind banaya
+
+aws   emr banaya
+
+gcp  data prop
+
+
+            three type of  enviroment
+
+
+1  production
+
+2   testting
+
+3   devlopment  
+
+
+  SLA   service level agrement
+
+hdf    se  apache nifi bana hai
+
+Group of machies meas coloster
+
+s3 and blob are smiler
+
+but microsoft provvided 4 types of blob
+contener
+tables
+fileshare
+Quese
+
+Hadoop on work ssh protocol
+
+Hadoop 1.x ke do major component hai
+HDFS 
+Map reduse
+
+HDFS is use for storage perpese
+
+Hadoop 1.x main us ka file size 64 mb tha
+
+meta data is tempary data
+
+name node is a hart of the system
+
+
+Hadoop 1 .x disadvatages
+
+it is single point of failour
+
+secondry namenode is a checkpointing node
+
+all the actual data is process data node
+
+tasktracker 
+
+jobtracker
+koi bhi chheze ko process karna hai tu jobtracker task banata hai
+
+Hadoop is a fall tolorant system  
+main  agar koi data node down hota hai tu hadoop automatic thikcare new data node

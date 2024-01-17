@@ -1,0 +1,364 @@
+      MARYA DB SERVER
+
+
+marya db server is open source
+this user is data base
+
+port no 3306  
+
+log fill  :   /var/log/mariadb/mariadb.log
+
+Install maridb server
+
+sudo yum install -y mariadb-server
+
+sudo systemctl start mariadb
+
+sudo systemctl status mariadb
+
+sudo systemctl enable mariadb
+
+sudo mysql_secure_installation
+
+ SETTING
+
+remove data base  n
+remove test data vbase n
+
+netstat -tnlpa | grep 3306
+
+mysql -u root  -p
+
+show databases ;
+
+     CREATE DATABASE
+
+create database ambari;
+create database metastore;
+
+create database oozie;
+
+create database ranger;
+
+show database;
+
+
+creat user
+
+use ambari;
+
+creat user
+
+CREATE USER 'ambari'@ 'localhosts' IDENTIFIED  BY 'bigdata' ;
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'ambari'@'localhost ' ;
+
+c. CREATE USER 'ambari'@'%' IDENTIFIED BY 'bigdata' ;
+
+CREATE USER 'ambari'@'privatate dns' IDENTIFIED BY  'bigdata' ;
+
+GRANT ALL PRIVILEGES ON *.* TO 'ambari'@'FQDN-OF-AMBARI-SERVER' ;
+CREATE USER 'ambari'@' FQDN-OF-AMBARI-SERVER ' IDENTIFIED BY '<bigdata' ;
+GRANT ALL PRIVILEGES ON *.* TO 'ambari'@' FQDN-OF-AMBARI-SERVER ' WITH GRAND OPTION ;
+
+FLUSH PRIVILEGES;
+
+Change data base
+
+show databases ;
+
+use metastore;
+
+
+
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@'localhost ' ;
+
+c. CREATE USER 'hive'@'%' IDENTIFIED BY 'bigdata' ;
+
+CREATE USER 'hive'@'privatate dns' IDENTIFIED BY  'bigdata' ;
+
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@'FQDN-OF-AMBARI-SERVER' ;
+CREATE USER 'hive'@' FQDN-OF-AMBARI-SERVER ' IDENTIFIED BY '<bigdata' ;
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@' FQDN-OF-AMBARI-SERVER ' WITH GRAND OPTION ;
+
+FLUSH PRIVILEGES;
+
+
+use oozie
+
+CREATE USER 'oozie'@ 'localhosts' IDENTIFIED  BY 'bigdata' ;
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'oozie'@'localhost ' ;
+
+c. CREATE USER 'oozie'@'%' IDENTIFIED BY 'bigdata' ;
+
+CREATE USER 'oozie'@'privatate dns' IDENTIFIED BY  'bigdata' ;
+
+GRANT ALL PRIVILEGES ON *.* TO 'oozie'@'FQDN-OF-AMBARI-SERVER' ;
+CREATE USER 'oozie'@' FQDN-OF-AMBARI-SERVER ' IDENTIFIED BY '<bigdata' ;
+GRANT ALL PRIVILEGES ON *.* TO 'oozie'@' FQDN-OF-AMBARI-SERVER ' WITH GRAND OPTION ;
+
+FLUSH PRIVILEGES;
+
+
+use ranger
+
+CREATE USER 'ranger'@ 'localhosts' IDENTIFIED  BY 'bigdata' ;
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'ranger'@'localhost ' ;
+
+c. CREATE USER 'ranger'@'%' IDENTIFIED BY 'bigdata' ;
+
+CREATE USER 'ranger'@'privatate dns' IDENTIFIED BY  'bigdata' ;
+
+GRANT ALL PRIVILEGES ON *.* TO 'ranger'@'FQDN-OF-AMBARI-SERVER' ;
+CREATE USER 'ranger'@' FQDN-OF-AMBARI-SERVER ' IDENTIFIED BY '<bigdata' ;
+GRANT ALL PRIVILEGES ON *.* TO 'oozie'@' FQDN-OF-AMBARI-SERVER ' WITH GRAND OPTION ;
+
+FLUSH PRIVILEGES;
+
+
+Exit mariaDB server
+exit
+
+Ambari setup
+
+sudo yum install wget vim -y
+
+sudo vim /etc/hosts
+privat ip and privat dns  amb 
+
+setup ssh
+
+ssh-keygen
+
+cd ~/.ssh
+
+cat  id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+
+chmod 600 ~/.ssh/authorized_keys
+
+ssh hdp-nn
+
+exit
+
+sudo yum install -y ntp
+sudo systemctl enable ntpd
+
+sudo systemctl start  ntpd
+sudo systemctl status  ntpd
+
+
+ls -ltr /etc/systemd/system/multi-user.target.wants/ntpd.service | grep /usr/lib/systemd/system/ntpd.service
+
+
+ 
+
+ 
+
+Disable SElinux
+
+ sudo vim /etc/selinux/config
+
+and disabled se linux
+
+swich to root
+
+sudo su
+
+echo umask 0022 >> /etc/profile
+
+exit root
+sudo wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.2.2/ambari.repo -O /etc/yum.repos.d/ambari.repo
+
+yum repolist
+install java conncetor
+sudo yum install mysql-connector-java
+sudo cp /usr/share/java/mysql-connector-java.jar /var/lib/ambari-server/resources/
+
+sudo ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java.jar
+
+cat /var/log/ambari-server/ambari-server.out
+sudo cp  /var/lib/ambari-server/resources/Ambari-DDL-MySQL-CREATE.sql  /opt/
+cd opt 
+ls -ltr
+
+sudo mysql -u ambari -p ambari < /opt/Ambari-DDL-MySQL-CREATE.sql
+cd
+
+
+
+install ambari server 
+
+sudo yum install ambari-server
+
+sudo ambari-server setup
+
+sudo ambari-server start
+
+and check the tail comand and show the real time lock
+tail -f  
+
+check UI 
+
+publice ip 
+
+52.66.198.168:8080
+
+hostname -f
+
+ sudo vim /etc/python/cert-verification.cfg
+
+sudo vim /etc/ambari-agent/conf/ambari-agent.ini
+force_https_protocol=PROTOCOL_TLSv1_2
+
+
+
+
+sudo ambari-server start
+publice ip 
+
+bigdata
+
+   Ambari setup
+
+cd ~/.ssh
+cat  id_rsa
+cat /etc/hosts
+52.66.198.168:8080
+3 
+service added 
+hive tez
+hdfs
+yarn
+zookeper
+pig
+ambari matrice
+ranger
+karbaros
+passwood big data
+
+
+commesing 2 intantce
+
+lauch 2 instantce
+
+all the prerepositry
+ssh genreat 
+sudo vim /etc/hosts
+make sure ambariserver 2 new node /etc/hosts entry
+
+
+cat id_pub  (copy the fill entry to 2 new node
+
+touch id_rsa 
+
+
+cat id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+
+chmod 600 ~/.ssh/authorized_keys
+
+
+ssh hdp-nn
+
+exit
+
+sudo yum install -y ntp
+
+sudo systemctl start  ntpd
+
+Disable SElinux
+
+ sudo vim /etc/selinux/config
+
+and disabled se linux
+
+swich to root
+
+sudo su
+
+echo umask 0022 >> /etc/profile
+
+exit root
+
+3 node DN1
+
+ssh genreat 
+sudo vim /etc/hosts
+make sure ambariserver 2 new node /etc/hosts entry
+
+
+cat id_pub  (copy the fill entry to 2 new node
+
+touch id_rsa 
+
+
+cat id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+
+chmod 600 ~/.ssh/authorized_keys
+
+
+ssh hdp-nn
+
+exit
+
+sudo yum install -y ntp
+
+sudo systemctl start  ntpd
+
+Disable SElinux
+
+ sudo vim /etc/selinux/config
+
+and disabled se linux
+
+swich to root
+
+sudo su
+
+echo umask 0022 >> /etc/profile
+
+exit root
+
+
+
+
+
+
+
+
+
+
+
+sudo ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-jdbc.driver
+
+
+CREATE USER 'ambari'@'localhost' IDENTIFIED BY  'bigdata';
+
+
+
+
+2020-10-25 08:39:36,071 - Host checks started.
+2020-10-25 08:39:36,071 - Check execute list: db_connection_check
+2020-10-25 08:39:36,071 - DB connection check started.
+WARNING: File /var/lib/ambari-agent/cache/DBConnectionVerification.jar already exists, assuming it was downloaded before
+WARNING: File /var/lib/ambari-agent/cache/mysql-connector-java.jar already exists, assuming it was downloaded before
+2020-10-25 08:39:36,072 - call['/usr/jdk64/jdk1.8.0_112/bin/java -cp /var/lib/ambari-agent/cache/DBConnectionVerification.jar:/var/lib/ambari-agent/cache/mysql-connector-java.jar -Djava.library.path=/var/lib/ambari-agent/cache org.apache.ambari.server.DBConnectionVerification "jdbc:mysql://ip-172-31-33-114.ap-south-1.compute.internal/metastore" "hive" [PROTECTED] com.mysql.jdbc.Driver'] {}
+2020-10-25 08:39:36,376 - call returned (1, "ERROR: Unable to connect to the DB. Please check DB connection properties.\njava.sql.SQLException: Access denied for user 'hive'@'ip-172-31-33-114.ap-south-1.compute.internal' (using password: YES)")
+2020-10-25 08:39:36,376 - DB connection check completed.
+2020-10-25 08:39:36,377 - Host checks completed.
+2020-10-25 08:39:36,377 - Check db_connection_check was unsuccessful. Exit code: 1. Message: ERROR: Unable to connect to the DB. Please check DB connection properties.
+java.sql.SQLException: Access denied for user 'hive'@'ip-172-31-33-114.ap-south-1.compute.internal' (using password: YES)
+
+Command failed after 1 tries

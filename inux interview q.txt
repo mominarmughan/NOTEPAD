@@ -1,0 +1,10 @@
+how will be adding user in to diffrent group
+what is diffrent between etc/passwd file and etc/shadow fill
+how will wactch hidden file in linux system
+diffent between softlink and hard link
+What is bash process in linux
+how will asign user to sudo pervillages ?  /  how will asing sudo role of user
+what is the diffrent between acl and chmode
+how to add user on multiplegroup
+What is the daliy use Linux command
+

@@ -1,0 +1,93 @@
+url for practical
+{scrip link}
+https://mithuntechnologies-devops.blogspot.com/search/label/Java {git huub link}
+https://github.com/orgs/MithunTechnologiesDevOps/
+
+maven-standalone-application {this is repo name}
+
+repositories?type=all
+meven is a build tool
+java = /ant/meven/gradle
+three are three type of application
+standalone application {jar - java archive}
+web applicatin {war web archive}
+enterprice {ear enterprices archive}
+if you download meven three are four directory hire
+bin boot lib conf
+jdk and jre is diffrent : 
+JDK : java devlpoment kit
+jre : java run time enviroment
+
+if you install meven you should install jdk only
+defalut file to build a code is pom.xml
+in html is all tages are predifine
+in xml all tages are not predifine
+artifaact nothing know as project
+
+In the context of Apache Maven, an "artifact" refers to a file produced by a Maven build, such as a JAR (Java Archive), WAR (Web Archive), or other packaged files. Maven uses the concept of artifacts to manage the build lifecycle and to handle dependencies between projects.
+
+install java
+#Login as a root user
+sudo su -
+
+##Change dir to /opt
+cd /opt
+yum install wget -y
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+yum install jdk-8u131-linux-x64.rpm -y
+
+java -version
+java-c  version
+
+meven install {time 1: 4}
+
+Step1) Login as a root user and change the directory to /opt/
+
+sudo su -
+cd /opt/
+yum install wget unzip -y
+
+Step2) Download the Maven Software
+
+wget https://dlcdn.apache.org/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.zip {this is old url make sure download latest softwere for meven site}
+unzip apache-maven-3.9.5-bin.zip
+export M2_HOME=/Users/mithunreddy/MithunTechnologies/Softwares/Running/apache-maven-3.6.2
+export PATH=$PATH:$M2_HOME/bin
+
+
+#maven installation
+export M2_HOME=/opt/apache-maven-3.9.5
+export PATH=$PATH:$M2_HOME/bin
+
+practical
+
+mvn package
+one package will be install
+type the ls
+go to the target directory 
+one jar file is been created
+of you have type mvn clean
+than your target directory delete
+mvn clean package 
+us command se pahle goal delete ho ga baad main install ho ga
+go to the local repo
+cd ~
+ls -la 
+m2
+repository
+you can see all the file 
+
+how to chage local repo to custum repo 
+make the dirctrory 
+cd ~
+mkdir mvn-local-repo
+<localRepository>/root/mvnlocal-repo/</localRepository>
+go to the setting.xml {45 minute}
+
+mvn clean package Dmaven.test.skip=true {if you using this it is skip the compael the uniit test and runnig the unit test}
+
+#includedir /etc/sudoers.d
+sonar   ALL=(ALL)  ALL
+
+if sonarqube server not runnig 
+sudo rm -rf /opt/sonarqube-7.8/tmp/

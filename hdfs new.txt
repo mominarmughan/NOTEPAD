@@ -1,0 +1,34 @@
+hdfs command
+              The /user/ directory is owned by "hdfs" with 755 permissions
+			   As a result only hdfs can write to that directory
+			   Unlike unix/linux, hdfs is the superuser and not root. So you would need to do this:
+
+            make directory
+			sudo -u hdfs hadoop fs -mkdir /user/,,myfile,,
+            sudo -u hdfs hadoop fs -put myfile.txt /user/,,/,,
+			
+			if you want root as a hdfs superuser you do this stap
+			sudo -u hdfs hadoop fs -mkdir /user/root
+			sudo -u hdfs hadoop fs -chown root /user/root
+          
+		  Then as root you can do "hadoop fs -put file /user/root/".
+		  
+		     How to delete currouted repleca
+			 
+		hadoop fsck / -delete
+        hadoop --help
+
+    how to copy data local to hdfs
+ hadoop fs -copyFormLocal License.txt /input
+relative patch
+hadoop fs -copyFormLocal user/local/hadoop liccense.txt user/local/input 
+
+  how to change shell 
+  go to root
+  sudo chsh -s /bin/bash hdfs
+  sudo su - hdfs
+  
+  how to create manuall check ponting ?  (time 2020 1 :37 ) checkpointing 
+ANS    hdfs dfsadmin -safemode enter
+       hdfs dfsadmin -saveNamespace enter
+	   hdfs dfsadmin -safemode leave

@@ -1,0 +1,36 @@
+ Question: What is Amazon EC2?
+
+Answer: Amazon Elastic Compute Cloud (EC2) is a web service provided by AWS that offers resizable compute capacity in the cloud. It allows users to run virtual servers, known as instances, and provides a variety of instance types optimized for different use cases.
+2. Question: What is an EC2 instance type?
+
+Answer: An EC2 instance type defines the virtual hardware of the host computer used for an EC2 instance. Each instance type comes with a specific combination of CPU, memory, storage, and networking capacity. Examples include t2.micro, m5.large, and c4.8xlarge.
+3. Question: Explain the difference between On-Demand Instances and Reserved Instances.
+
+Answer: On-Demand Instances are pay-as-you-go, allowing you to pay for compute capacity per hour with no upfront costs. Reserved Instances, on the other hand, involve a one-time upfront payment for a significant discount on the hourly charge in exchange for a commitment to a one- or three-year term.
+4. Question: What is the purpose of an Amazon Machine Image (AMI)?
+
+Answer: An AMI is a pre-configured virtual machine image that is used to create instances in EC2. It includes the information needed to launch an instance, such as the operating system, application server, and applications.
+5. Question: How can you secure your EC2 instances?
+
+Answer: Security measures for EC2 instances include using Security Groups to control inbound and outbound traffic, configuring Network Access Control Lists (NACLs) at the subnet level, using key pairs for secure instance access, and regularly updating and patching the operating system and applications.
+6. Question: What is an Elastic Load Balancer (ELB), and how does it work with EC2 instances?
+
+Answer: An Elastic Load Balancer distributes incoming traffic across multiple EC2 instances to ensure high availability and fault tolerance. It automatically scales in and out based on demand, directing traffic only to healthy instances.
+7. Question: Can you explain the differences between EBS and instance store volumes?
+
+Answer: Amazon EBS (Elastic Block Store) provides persistent block-level storage volumes that can be attached to EC2 instances. Instance store volumes, on the other hand, are temporary storage associated with the EC2 instance that is lost when the instance is stopped or terminated.
+8. Question: How can you scale EC2 instances horizontally and vertically?
+
+Answer: Horizontal scaling involves adding more instances to handle increased load, typically using Auto Scaling groups. Vertical scaling involves increasing the resources (CPU, memory) of an existing instance, often done manually or with tools like AWS Auto Scaling.
+9. Question: What is the purpose of Amazon CloudWatch in the context of EC2?
+
+Answer: Amazon CloudWatch is a monitoring service that provides real-time monitoring of AWS resources, including EC2 instances. It allows users to collect and track metrics, set alarms, and automatically react to changes in AWS resources.
+These questions cover a range of EC2-related concepts and are designed to assess your understanding of key AWS services and features.
+
+what is the benefit of autoscaling?
+Cost Efficiency
+Performance Optimization
+Improved Reliability and Availability
+Enhanced Flexibility
+
+diffrent between on demand instace and spot instace 

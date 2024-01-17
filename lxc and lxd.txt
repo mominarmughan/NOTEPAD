@@ -1,0 +1,40 @@
+linux monitoring Lxc Lcd 
+
+what is zombbie procces 
+koi aaisa process jo complet ho gaya tha liken backend main us ka process abhi bhi chal raha hai aaise process ko jombbe process kahte hai
+
+linux monitoring comand
+
+top
+
+vmstat
+
+free -g
+iostat
+
+htop
+
+sar
+
+
+how to add contener
+
+
+sudo apt install lxd lxd-client
+
+sudo lxd init
+
+lxc list
+
+lxc launch ubuntu:18.04
+
+lxc launch ubuntu:18.04 my-ubuntu
+
+lxc exec my-ubuntu -- /bin/bash
+
+cat /etc/*release*
+
+how to stop contener
+
+lxc stop my-ubuntu -- /bin/bash
+lxc stop sweeping-gnat -- /bin/bash

@@ -1,0 +1,9 @@
+
+
+          HIVE   
+
+two type of table of hive
+internal and external table
+
+24 mioptiazation of hive anjan as tez
+exsivecative anjun of hive

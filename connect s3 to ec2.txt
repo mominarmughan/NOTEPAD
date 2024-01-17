@@ -1,0 +1,75 @@
+sudo apt update
+sudo apt install unzip
+install aws cli
+first install ec2 instace
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.h
+sudo apt install unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+
+cammand
+aws --version
+ls .aws/
+aws configure
+
+authetion ke liye iam role lage ga
+sab se pahle role main jaye role main ec2 instace ko enable kare ge
+us ke baad ss3 main bucte bayae ge ayr ek fill uplode kare de 
+phir terminal par aa kar 
+aws s3 ls kare ge
+
+copy s3 
+
+aws s3 cp se.jpg  s3://myawsamu
+
+se.jpg is image fill
+myawsamu is my bukit
+
+how to create user group policy and role
+
+first we can creaate user and add user in to group
+
+and asing role and policy
+attach policy to role
+go to ec2 instace and go to action button  security >>>>>>>>>> iam role modify>>>>>>>> and select role
+
+
+                             NOTE .......
+
+
+IF POLICY and role  HAS ALL REDAT created and attach    than if you edit policy  waya role than policy ko attach nahi karna hota hai
+
+
+role >>>>>>>>>> myrole  >>>>>>>>>>>>>>>>>  mypolicy >>>>>>>>>>>>. edit the policy 
+than you dont ware about the attach a  policy in evey time
+if you are attach policy to new policy than your prenmision denie eoor
+
+and make sure ec2 instace are asine to role
+
+ec2 >>>>>>> action>>>>>>>>>>>. security >>>>>  iam role >>>>>>>. attach role >>>>>>.
+if you are attach new policy of role
+
+
+                                    AFFAN SIR
+
+sudo apt update
+sudo apt install unzip
+install aws cli
+first install ec2 instace
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.h
+sudo apt install unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+us ke baad root accout main ja kar security creation main create acces key ko enable kare ge
+us ke baad aws configure kare ge
+
+aws s3 mb s3:// mybucket
+aws s3 ls
+
+
+
+

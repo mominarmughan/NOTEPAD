@@ -1,0 +1,169 @@
+yum install docker
+which docker {check install docker or not}
+docker -v  {docker version check}
+service docker start {start docker}
+docker info {information about docker}
+docker images  
+docker ps {show the running contener}
+or
+docker container ls
+
+Lets remove all the docker containers
+# docker rm  -f  $(docker ps -aq) {delete all the countainer}
+docker rmi image_name_or_id  {delete images}
+
+docker-compose up  -d {if you use -d your contaner is start but log massage not show}
+
+
+
+
+docker run -it ubuntu /bin/bash {pull the repository to ubuntu}
+docker ps -a 
+exit {exit the container}
+docker run -it ubuntu /bin/bash {jab hum wapis se ye command  chalaye ge tu new container reat ho ga }
+docker run -it centos /bin/bash go to that contaner
+docker run  -it --name shah ubuntu /bin/bash {change the name of contaner
+docker start ammu {start the contaner}
+docker stop ammu {stop that contaner}
+docker attach ammu {go to that contaner}
+docker rm ammu {delete that contaner}
+docker diff bupi {diffrent between your update image and excesting image}
+docker commit bupi update {create image commad}
+docker run -it --name raj update  /bin/bash {create image in that same image that file  you can creat there is hire}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  create docker file make sure file name is same
+
+  vi Docker
+  FROM ubuntu
+RUN echo “Nagarjuna hota” > /tmp/testfile
+
+docker run -it --name testp test /bin/bash {create image }
+
+#vi dockerfile
+FROM ubuntu
+WORKDIR /tmp
+RUN echo “thank you” > /tmp/testfile
+ENV myname naga
+COPY testfile1 /tmp
+ADD test.tar.gz /tmp
+
+tar -cvf test.tar test
+gzip test.tar
+docker build -t new-image .  {build a image}
+docker run -it --name zubair new-image /bin/bash {creat a contener commad}
+
+# Stop all running containers
+docker stop $(docker ps -a -q)
+
+# Remove all containers
+docker rm $(docker ps -a -q)
+
+# Remove all images
+docker rmi $(docker images -q)
+
+creat volume in docker
+vi Dockerfile
+FROM ubuntu
+VOLUME ["/myvolume"]
+
+and than creat image
+
+docker build -t ammu .
+
+and than creat container
+
+docker run -it --name fish ammu /bin/bash  {fish is contaner name}
+
+and than creat multiple file in volume
+
+touch ab cd ef
+
+docker run -it --name container2  --privileged=true --volumes-from vol  ubuntu /bin/bash  
+
+command ke zarye container banana
+
+docker run -it --name container3 -v /volume2 ubuntu /bin/bash
+
+docker run -it --name container2  --privileged=true --volumes-from vol  ubuntu /bin/bash  
+
+
+host to contener maping
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+how to port open in jango
+you make sure port 8000 tcp allow aws 
+first clone the repository
+docker cloun reponame
+~/Docker-Zero-to-Hero/examples/python-web-app go to that directory
+create image of 
+docker build -t clon image .
+ creat contaner
+ docker run -p 8000:8000 -it image name  {you can use any number of port mapping 7188:8080}
+docker inspect  con / vol 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  how to link a contaner
+  docker run --name fog --link dog:ammu -it busybox {ammu is a alines link name}
+
+  how to proved a contaner are connected 
+  ping the first contaner  {ping dog is my first contaner}
+
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+     
+      my db link to mysql
+
+   first pull the workspace image
+   docker pull wordpress   
+
+  docker run --name mysite -d -p 5050:80 --link mydb:mysql wordpress
+
+  copy public ip :5050
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+two way of multicontaner architaure
+
+--link
+docker compose
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+how to creat a yml file
+
+docker-compose.yml ye file ka naam change nahi ho ga us file ke madad se hum contaner creat kar sakte hai us ko link kar kar sakte hai {go to dev-op couse 23 days more info}
+
+vim docker-compose.yml
+
+---
+version: '3'
+services:
+ devserver:
+  image: jenkins/jenkins
+  ports:
+   - 7070:8080
+
+ qaserver:
+  image: tomee
+  ports:
+   - 8899:8080
+  links:
+   - devserver:jenkins
+
+
+ prodserver:
+  image: tomee
+  ports:
+   - 9090:8080
+  links:
+   - devserver:jenkins
+...
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ docker Orchestration
+ first advangees of docker Orchestration is load blancing 
+creat 3 machice 
+install docker
+chage hosts name 
+install swam in manager machice and join the swam inn other two machice

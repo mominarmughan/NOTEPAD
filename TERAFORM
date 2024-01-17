@@ -1,0 +1,261 @@
+DOWNLOAD TERAFORM
+downloadd aws cli
+download vscode
+install teraform vscode extension by hashicrop and aws cli extention
+edit the view advance setting "teraform ka parth dena hai"
+create folder
+create file with .tf
+ansible repostory ya softwere install karne ke liye hota hai
+teraform cloud ka server banata hai 
+ 
+            CODE FOR EC2 DEPLOYMENT
+  terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+resource "aws_instance" "name" {
+    ami= "ami-041feb57c611358bd"
+    instance_type = "t2.micro"
+}
+
+and then go to terminal window type {terraform init}
+and than {terraform plan}
+and than {teraform apply}
+know instance will create suceesful
+delete the instance type terraform destory  
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  how to create multiple instace in diffrent region
+
+  provider "aws" {
+  region = "us-east-1"
+}
+resource "aws_instance" "name" {
+    ami= "ami-041feb57c611358bd"
+    instance_type = "t2.micro"
+}
+
+provider "aws" {
+alias="west"
+  region = "us-west-1"
+}
+resource "aws_instance" "name" {
+    ami= "ami-041feb57c611358bd" {you should change ami id before createing inctance}
+    instance_type = "t2.micro"
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+          create i am role 
+  resource "aws_iam_user" "lb" {
+  name = "loadbalancer"       {this is user name}
+  path = "/system/"
+
+  tags = {
+    tag-key = "tag-value"   {this is tag name}
+  }
+}
+
+resource "aws_iam_access_key" "lb" {
+  user = aws_iam_user.lb.name              {this is acces key name}
+}
+
+data "aws_iam_policy_document" "lb_ro" {
+  statement {
+    effect    = "Allow"
+    actions   = ["ec2:Describe*"]
+    resources = ["*"]
+  }
+}
+
+resource "aws_iam_user_policy" "lb_ro" {             {this is name of policy}
+  name   = "test"
+  user   = aws_iam_user.lb.name
+  policy = data.aws_iam_policy_document.lb_ro.json
+}  
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+create ec2 volume
+
+resource "aws_ebs_volume" "example" {
+  availability_zone = "us-east-1a"
+  size              = 1
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}      
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  watch metadata
+
+  go to terraform.tfstate
+
+  type this command
+  {
+  "version": 4,
+  "terraform_version": "1.6.1",
+  "serial": 41,
+  "lineage": "81f0e2cf-3e30-ad96-6566-be52919c4f92",
+  "outputs": {},
+  "resources": [
+
+  teeraform apply
+
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  comment un comment
+  /*resource "aws_instance" "name" {
+    ami= "ami-041feb57c611358bd"
+    instance_type = "t2.micro"
+}*/
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ create s3 buctet
+ 
+ resource "aws_s3_bucket" "demo_bucket_s3" {
+  bucket = "demo_bucket"
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+put object s3
+
+resource "aws_s3_bucket_object" "file" {
+  bucket = "aws_s3_bucket.armughannn-123.id"
+  key    = "d.txt"
+  source = "C:\Users\momin\OneDrive\Documents\issc\hello.txt"
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# vpc creation
+
+resource "aws_vpc" "terraform-vpc" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "terraform-vpc"
+  }
+}
+
+# subnet (pub)
+
+resource "aws_subnet" "terraform-pub-sub" {
+  vpc_id     = aws_vpc.terraform-vpc.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "terraform-pub-sub"
+  }
+}
+
+# subnet (pri)
+
+resource "aws_subnet" "terraform-pri-sub" {
+  vpc_id     = aws_vpc.terraform-vpc.id
+  cidr_block = "10.0.2.0/24"
+
+  tags = {
+    Name = "terraform-pri-sub"
+  }
+}
+
+# internet gw
+
+resource "aws_internet_gateway" "terraform-igw" {
+  vpc_id = aws_vpc.terraform-vpc.id
+
+  tags = {
+    Name = "terraform-igw"
+  }
+}
+
+#  route table
+
+resource "aws_route_table" "terraform-rt-pub" {
+  vpc_id = aws_vpc.terraform-vpc.id
+
+  route {f
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.terraform-igw.id
+  }
+
+  tags = {
+    Name = "terraform-rt-pub"
+  }
+}
+
+
+# association
+
+resource "aws_route_table_association" "rt-asscociation" {
+  subnet_id      = aws_subnet.terraform-pub-sub.id
+  route_table_id = aws_route_table.terraform-rt-pub.id
+}
+
+
+# elastic ip
+
+resource "aws_eip" "terraform-eip" {
+}
+
+#nat
+
+resource "aws_nat_gateway" "terra-nat" {
+  allocation_id = aws_eip.terraform-eip.id
+  subnet_id     = aws_subnet.terraform-pub-sub.id
+
+
+  tags = {
+    Name = "terra-nat"
+  }
+}
+
+# route table
+
+resource "aws_route_table" "terraform-pri-routetable" {
+  vpc_id = aws_vpc.terraform-vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.terra-nat.id
+  }
+
+  tags = {
+    Name = "terraform-pri-routetable"
+  }
+}
+
+# association with pri-route
+
+resource "aws_route_table_association" "private-route" {
+  subnet_id      = aws_subnet.terraform-pri-sub.id
+  route_table_id = aws_route_table.terraform-pri-routetable.id
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+variable.tf naam se variable file create karna hai
+
+variable "instance" {
+    default = "t2.micro"
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+AKIAXNWXIJ6YX3IGD2UW
+ huf+Ab/6uDSioy02cGU72Cz3oQSDIqbE1ydZu8dv
+ 

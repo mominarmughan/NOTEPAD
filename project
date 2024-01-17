@@ -1,0 +1,44 @@
+project 
+
+first done all the  prerequit
+than create first our first terraform code
+create three ec2 instace with security
+
+copy the  pem key to ansible node 
+ mv dpp.pem /opt/
+copy pem gile to opt folder
+chmode 400 dpp.pem
+create hosts file in opt folder
+[jenkins-master]
+ 10.1.1.233 ansible_user=ubuntu ansible_ssh_private_key_file=/opt/dpp.pem
+
+ [jenkins-slave]
+ 10.1.1.243 ansible_user=ubuntu ansible_ssh_private_key_file=/opt/dpp.pem
+ansible all -i hosts -m ping
+
+ repo: deb-src http://archive.canonical.com/ubuntu hardy partner
+
+ command to run a ansible playbook dry run 
+ ansible-playbook -i /opt/hosts jenking-master-setup.yaml --check
+
+ command to run a ansible playbook
+ ansible-playbook -i /opt/hosts jenking-master-setup.yaml
+ copy the publice ip of jenkins master port will be 8080
+ 
+ first setup jenkis master and slave {make sure after playbook run }
+bcfc1a47f1e2492eac4c14adbb84eaf6 {this is a jenkis password}
+
+first chhange the jenkis password 
+go to the admin and chage the password
+after that manage creadation 
+go to  manage jenkis > credatial > system >global credatiol and
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ nade node to jenkis slave
+ go to manage jenkis>>node
+ name  of the node
+ us ke baad permanent agent par  click kare ge
+  
+
+
+
+

@@ -1,0 +1,64 @@
+       Ranger  
+
+two distributionm of market one is cloudera
+second is ranger
+ranger is secuity pappes
+resurce base policy
+location base policy
+
+set the policy
+
+passwood should be
+one uppercase one number and one 
+and 8 bit
+
+Ranger port no 6080
+
+     RANGER INSTALLATION	 
+
+Ranger DB host is private dns of ambari server
+solar clod is allso on
+Bigdata1
+
+bigdata
+
+
+username is admin
+and passwood is Bigdata1
+
+2 tyep of policy deonet work so acl policy should disaby before ranger policy started
+hdfs dfs -chmod 000 /test.ranger
+hdfs dfs mkdir / testranger
+
+
+hdfs dfs -chmod 000 /testranger
+hdfs dfs -ls /
+hdfs dfs -put test.txt /testranger
+hdfs dfs -getfacl / testacls
+hdfs dfs -setfacl  -R  -m user:ammu:r-x /testacls
+
+ranger plugin
+go to ranger con and enable hdfs and hive plugin
+and restart all required service
+user add to hadoop
+ usermod -g hadoop admin
+
+change permision to hdfs
+
+hdfs dfs -chown admin:hadoop /user/admin
+
+
+
+
+ranger practical
+
+
+select * from emp1
+
+add value
+
+login to onather user and accese the admin data bases
+first only select acces 
+onather  write acces
+
+ 

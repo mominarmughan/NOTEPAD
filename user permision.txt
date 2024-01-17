@@ -1,0 +1,142 @@
+1)user level permision 
+
+
+
+
+
+2) You may need to know how to change permissions in numeric code in Linux, so to do this you use numbers instead of “r”, “w”, or “x”.
+
+0 = No Permission
+1 = Execute
+2 = Write
+4 = Read
+
+3) permission numbers are:
+
+0 = ---
+1 = --x
+2 = -w-
+3 = -wx
+4 = r-
+5 = r-x
+6 = rw-
+7 = rwx
+
+ADD USER
+useradd ammu
+
+ADD GROUP
+groupadd admin
+
+add user into group
+
+usermod -g admin ammu
+
+how many group are user add
+id ammu 
+
+
+change user directory permisiom
+
+chmod 770 ammu
+
+change owner ship of permision
+
+chown ammu:pro ammu
+
+how to user wheel group
+go to  visudo
+
+
+
+
+go to visudo file enable wheel group
+usermod -a -G wheel  ammu
+
+remove users from wheel group 
+gpasswd -d username wheel
+
+
+
+how to delete the user
+
+
+userdel ammu
+
+delete prement
+
+userdel -r ammu
+
+koi bhi user ko dosre user ka acces jab he mele ga jab dono user ek he grouop se ho
+
+
+how to add user in multiple group
+
+usermod -g admin ammu  or  usermod -a -G admin ammu
+when ever you go add user that entry shoud be passwd fill
+
+do user ek group main rahne ke bawajood bhi ek dosre ke directory use nahi kar sati jab jak dono user ko rwx ka permision nahi milta
+suppose  i have one user call ammu   700 premision        ammu   pro
+  and second is shahbaz              770 permision        shahbaz dev
+agar shahbaz ko hami ammu ke directory ko acces karna ho ga to hame  us ki permision  770 aur group ko dev banana bade ga
+
+cat is use for input and output of divice
+
+cat
+hi all
+hi hall
+
+
+input and output of file
+cat < /etc/passwd > as
+
+how to check server to server connectivity
+
+telnet -f ip address of machince
+
+
+check the directory size
+
+du -skh home/
+
+how to check package
+rpm -qa | grep java
+
+what are the diffrece between etc /passwd  fill and etc shadow fill
+and etc shado fill
+etc shado fill main encypted form main passwood hota hai
+aur etc passwd main user ke sare information hote hai
+
+how to acees any user directory
+
+first
+you can change the premision 700 to 770 
+chmod 770 and user name
+than login onother user and acces the change premision user
+
+
+
+how  to kill linex zombi process 
+
+ps -ef | grep yum
+
+koi bhi user ko kisi dosre user ke directoy tabhi acces ho ge jab wo dono user ek he group maiin ho aur 
+
+awk comaand
+awk '{print $1}' abc
+awk command is basiscally use for shorting file row 
+
+copy the fiile
+cp /etc/selinux/config /root
+
+copy all the file in folder
+
+cp -r source  and dictany
+
+
+what is the diffrent between rsing and scp
+
+suppose i have 100 GB file 50 GB copy and network interfer  tab ham r sing chalate hai hai jis se wo copy howa dasta dobara copy nahi hota r sing is a server and clinet arctachre
+
+
+usermod -g prigro -G second , tersery 

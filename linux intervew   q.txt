@@ -1,0 +1,67 @@
+  what is diffrent between etc/passwd file and etc/shadow fill
+how to check how many group in my linux system
+cat /etc/group
+what is diffrent between ssh and telnet
+how will be adding user in to diffrent group
+what is the difference between sftp and resin
+How To Check System Load in Linux
+how to check process id of service
+    ps -ef | grep service name 
+	
+1. Difference between Softlink and Hardlink
+ soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file. 
+If you delete the original file, the soft link has no value, because it points to a non-existent file. But in the case of hard link, it is entirely opposite. 
+Even if you delete the original file, the hard link will still has the data of the original file. Because hard link acts as a mirror copy of the original file.
+
+When you create a file using touch file. what is the default permission?
+Ans: 755 
+
+How do you list the Hidden files in linux 
+ls -a 
+
+What is Zombie process in Linux. and how to kill it?
+Ans:- Zombie Process:- The process which has been finished and killed but still display at dashboard is called Zombie Process.
+	  Command to kill > kill -9 Process_ID/Process_Name
+
+how to mount hard drive
+
+Use of netstat command
+The network statistics ( netstat ) command is a networking tool used for troubleshooting and configuration, that can also serve as a monitoring tool for connections over the network. Both incoming and outgoing connections, routing tables, port listening, and usage statistics are common uses for this command
+
+what is use daily use linux  command
+create  and delete fill and  directoy command , listing dirctoy and  hidden fill command , adding and removing user command , copy and  remove command , changing owner ship  chmod command , grep command , show disk usage command , and kill command etc 
+
+what is the purpose of Host file in linux
+the  purpose of hosts fill is adding a entry of node comunicate othe node of cluster
+
+
+Bash is a Unix shell, which is a command-line interface for interacting with the operating system. In Linux, a process is an instance of a program in execution. When you run a command in a terminal or through a shell script, a new process is created to run that command. If the command you run is a Bash shell script, then the process that is created is a Bash process.
+
+How do you create user in Linux, Suppose let say I want to create a user xyz and I want to assigne 
+that user into two diff group one group is called admin and second group called AD can you 
+write down the command 
+adduser xyz 
+passwd xyz 
+usermod -a -G group1(admin),group2(AD) username (xyz) 
+
+when we use ping command what is the backend portol backend ?
+internet contorl massage portocol
+
+how to check my tom cat server or any server runnig or not ?
+ps -ef | grep tomcat
+
+what is diffalt permision of user  in linux ?
+700
+how to check one user how many group ?
+ id ammu
+ 
+ how do you assign the sudo role to user in linux? 
+usermod -a -G wheel (username ) 
+   
+wheel group : what is the one purpose of wheel group : like if we created a user and we want to 
+provid it sudo access we have to add that user in wheel group first with the help of edit "visudo" 
+and give % sign to %wheel (allow people in a group wheel to run all the commands) 
+visudo : do not give % for root acccess and it will raise security concern ... this command to edit 
+visudo is a tool for safely updating the /etc/sudoers file, found in most Linux systems (Ubuntu for 
+example). This is the file that is required for allowing regular users run commands with superuser 
+privileges - using sudo command 

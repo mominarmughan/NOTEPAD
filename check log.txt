@@ -1,0 +1,15 @@
+check log file
+
+cat /var/log/ambari-server/ambari-server.out
+
+check realtime log
+tail -f nifi-app.log
+
+tail -f  100 nifi-app.log
+
+vim  nifi-app.log
+command mode and screach /error
+/ERROR
+
+?ERROR
+?error

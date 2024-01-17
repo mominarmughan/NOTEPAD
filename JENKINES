@@ -1,0 +1,9 @@
+                                   JENKINES
+GIT & GITHUB
+DOCKER
+MEVEN
+JENKIES
+ANSIBLE
+KUBERNETS
+Artifact in Jenkins:
+In the context of Jenkins, an artifact generally refers to the output of a build process. When you build a software project using Jenkins, the result is often a set of files or binaries that are produced as part of the build. These files, such as compiled code, libraries, or executables, are referred to as artifacts. Jenkins allows you to archive and manage these artifacts, making them available for further stages in your CI/CD pipeline or for deployment.                                   

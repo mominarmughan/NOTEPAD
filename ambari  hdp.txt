@@ -1,0 +1,48 @@
+apache 
+
+ sudo vim /etc/hosts
+
+
+ssh-keygen
+
+cd ~/.ssh
+ls -ltr
+cat id_rsa.pub >> authorized_keys
+
+sudo chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+sudo ufw disable
+
+sudo iptables -X
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+sudo iptables -t mangle -F
+sudo iptables -t mangle -X
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+
+sudo apt-get update
+sudo apt-get install ntp 
+sudo service ntp start
+
+sudo wget -O /etc/apt/sources.list.d/ambari.list http://public-repo-1.hortonworks.com/ambari/ubuntu16/2.x/updates/2.7.3.0/ambari.list
+
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
+sudo apt-get update
+
+Confirm that Ambari packages downloaded successfully by checking the package name list.
+
+sudo apt-cache showpkg ambari-serve
+sudo apt-cache showpkg ambari-agent
+apt-cache showpkg ambari-metrics-assembly
+
+copy the publice ip and port 8080
+open UI
+id passwoord admin admin
+
+copy privat dns
+cd ~/.ssh
+cat id _rsa
+copy the privat key

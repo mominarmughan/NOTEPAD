@@ -1,0 +1,16 @@
+first create data stream kin
+than create amazon fire host
+create s3 bucket
+data stream extract kare ga data aur data firehose ingest kare ga data
+kiness data genrater kae passwd maain special chactar jaise @ nahi ho ga {KinesisK1}
+output main ja kar link copy kare ge us ke baad id aur passwood dale ge
+id  Kinesis   passwood 
+cloud traile main output main jar kar link copy karna hai nahi tu id passwood accept nahi kare ga
+
+us ke baad sensor data ke file ko copy karne ka send data par clik kare ka kuch time wait karne ke baad stop karna hai
+wapis kiness data streem main jana hai waha demo par clik ka ke data view main shard ko select kare ge at timestap bhi select kare ge
+jab tak recod nahi aaye ga jab tak next recod karna hai
+us ke baad fire host main ja kar monitring main dekhna haai
+use se baad glue ke liye vpc endpoint create kare ge
+use ke baard defult redshit create kare ge
+use ke baad glu main connection staablesh kare ge

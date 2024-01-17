@@ -1,0 +1,315 @@
+Multi node deploy to way inrener data base and inbaded data base
+
+     Multi node Ambari Server
+
+(1)  ssh-keygen
+(2)  cd  ~/.ssh
+3)  ls  -ltr
+4)  cat id_rsa.pub >> authorized_keys
+
+5)  chmod 700 ~/.ssh
+
+6 )  chmod 600 ~/.ssh/authorized_keys
+
+7 ) sudo yum install vim wget
+
+8)  sudo vim /etc/hosts
+
+all the instace private ip and private dns copy and name of the server
+
+check the hosts fill
+
+9 )cat /etc/hosts
+
+check ssh
+
+ssh ambari-server
+exit 
+
+          login to name node
+
+downlod
+
+
+sudo yum install vim wget
+
+cd  ~/.ssh
+copy the fill id_rsa.pub
+
+touch id_rsa.pub
+
+  vim  id_rsa.pub
+and copy the ambari server  id_rsa.pub contant 
+
+change the permision of fill
+
+chmod 644 id_rsa.pub
+
+ 
+
+cat id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+go to ambari server 
+
+cat /etc/hosts
+
+
+ssh nn
+exit
+
+set the hosts fill
+sudo vim /etc hosts
+
+login to snn
+
+downlod
+
+
+sudo yum install vim wget
+
+cd  ~/.ssh
+copy the fill id_rsa.pub
+
+touch id_rsa.pub
+
+  vim  id_rsa.pub
+and copy the ambari server  id_rsa.pub contant 
+
+change the permision of fill
+
+chmod 644 id_rsa.pub
+
+ 
+
+cat id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+go to ambari server 
+
+cat /etc/hosts
+
+
+ssh dn1
+exit
+
+set the hosts fill
+sudo vim /etc hosts
+
+login to data node
+
+downlod
+
+
+sudo yum install vim wget
+
+cd ~/.ssh
+copy the fill id_rsa.pub
+
+touch id_rsa.pub
+
+  vim  id_rsa.pub
+and copy the ambari server  id_rsa.pub contant 
+
+change the permision of fill
+
+chmod 644 id_rsa.pub
+
+ 
+
+cat id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+go to ambari server 
+
+cat /etc/hosts
+
+
+ssh nn1
+exit
+
+set the hosts fill
+sudo vim /etc hosts
+
+
+login to ambari server
+cd ~/.ssh
+sudo yum install -y ntp
+
+sudo systemctl start ntpd
+sudo systemctl status ntpd
+
+ssh nn
+sudo yum install -y ntp
+sudo systemctl start ntpd
+sudo systemctl status ntpd
+
+exit
+
+ssh nn1
+
+sudo yum install -y ntp
+sudo systemctl start ntpd
+sudo systemctl status ntpd
+
+
+exit
+
+ssh dn1
+
+sudo yum install -y ntp
+sudo systemctl start  ntpd
+sudo systemctl status ntpd
+
+exit
+
+login to ambari 
+disabled selinux
+sudo vim /etc/selinux/config 
+exit
+
+ssh nn
+disabled selinux
+sudo vim /etc/selinux/config 
+exit
+
+ssh nn1
+disabled selinux
+sudo vim /etc/selinux/config 
+exit
+
+ssh dn1
+
+disabled selinux
+sudo vim /etc/selinux/config 
+exit
+
+ssh ambari-server
+sudo su ( swich to root )
+echo umask 0022 >> /etc/profile
+
+exit
+exit
+
+ssh nn
+sudo su ( swich to root )
+echo umask 0022 >> /etc/profile
+exit
+exit
+
+ssh nn1
+
+sudo su ( swich to root )
+echo umask 0022 >> /etc/profile
+exit
+exit
+
+ssh dn1
+
+sudo su ( swich to root )
+echo umask 0022 >> /etc/profile
+exit
+exit
+login to ambari-server
+
+   download ambari repository
+cd ~/.ssh
+
+sudo wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.7.3.0/ambari.repo -O /etc/yum.repos.d/ambari.repo
+
+check repository
+yum repolist
+
+sudo yum install ambari-server
+
+cd
+
+sudo ambari-server setup
+
+sudo ambari-server start
+
+UI
+
+copi the publice ip 8080 
+
+awk '{print $2}' /etc/hosts
+
+cd ~/.ssh 
+
+cat id_rsa
+
+edit the file
+
+sudo vim /etc/python/cert-verification.cfg
+
+disable
+
+all the node  disable
+
+sudo vim /etc/ambari-agent/conf/ambari-agent.ini
+(security )
+force_https_protocol=PROTOCOL-TLS-2
+
+file will be added all the node
+
+java conncetor download
+
+sudo yum install mysql-connector-java
+ls  /usr/share/java/mysql-connector-java.jar
+
+sudo cp /usr/share/java/mysql-connector-java.jar  /var/lib/ambari-server/resources/
+
+ls -ltr /var/lib/ambari-server/resources/ |grep mysql-connector
+
+
+
+my a one volume for 10 GB for data node 
+
+swich to  data node and root
+
+sudo su
+cd
+
+parted /dev /xvdf
+mklabel gpt
+unit GB
+mkpart primary 0 10 GB
+quit
+exit 
+cd /opt
+ sudo mkdir data
+exit
+sudo su
+fdisk -l /dev/xvdf
+mkfs.xfs -f /dev/xvdf1
+
+mount /dev/xvdf1 /opt/data
+
+copy the /opt/data  hdfs conf
+
+
+
+
+
+
+
+
+
+172.31.41.164 ip-172-31-41-164.ap-south-1.compute.internal Ambari-server
+172.31.41.47 ip-172-31-41-47.ap-south-1.compute.internal nn
+172.31.43.183 ip-172-31-43-183.ap-south-1.compute.internal snn
+172.31.47.121 ip-172-31-47-121.ap-south-1.compute.internal dn1
+
+ambari-agent  data
+
+
+
+
+ 
+

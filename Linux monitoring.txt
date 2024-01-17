@@ -1,0 +1,26 @@
+
+how to make continer
+
+sudo apt install lxd lxd-client
+
+
+
+sudo lxd init
+
+
+ sudo echo 10 >> many
+
+ sudo cat/etc/*releas*
+
+
+ sudo launch ubuntu : 18.04l
+
+lxc launch ubuntu:18.04 my-ubuntu
+ 
+lxc exec my-ubuntu -- /bin/bash
+
+lxc stop my-ubuntu -- /bin/bash
+
+linux comand
+
+whoami            show user login

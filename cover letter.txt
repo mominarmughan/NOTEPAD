@@ -1,0 +1,37 @@
+Application for the post of Hadoop Administrator
+
+
+
+Respected Sir / Madam,
+
+In response to your job posting for hadoop administrator, I am including this letter and my resume for your review.
+
+In my previous role, I was responsible for hadoop Administration support which includes software installation (Hortonworks, Cloudera, etc.), configuration, upgrading/patching, monitoring, trouble shooting, maintenance, and working with development team to install components (Hive, Pig, etc.).
+
+My experience is an excellent fit for the list of requirements in this job:
+
+• 4+ years of experience in Hadoop, Included Enterprise and Apache Hadoop.
+• Working on Hadoop Architecture and Ecosystem.
+• Good working knowledge in HA Implementation of Name node and RM to avoid SPOF
+• Roles and Responsibilities in installation, configuration, supporting and managing Hadoop 
+Cluster usingApache, Ambari-2.x, Hortonworks Data Platform (HDP-2.x) on amazon web
+services (AWS), &
+VM’s.)
+• Deployed Enterprise Grade Cluster with Ambari-2.x, Hortonworks Data Platform (HDP-2.x) with 
+SecurityCompliances (Kerberos) and Ranger Policies.
+• Adding new host, decommissioning the existing host on running cluster and balancing HDFS block
+data.
+• Working Knowledge on Kerberos, KMS and Encryption Zone.
+• Troubleshoot, diagnose and solving Hadoop issues using CLI, CMUI and Apache WebUI.
+• Worked on AWS cloud such that EC2 Instances, S3, Virtual Private Cloud, Key 
+Pairs andSecurity Group
+• Working knowledge on Distributed Copy to transfer data from one cluster to another.
+• Working knowledge on creating Snapshot of data.
+• Setting up Hadoop prerequisite on linux server
+
+
+Thank you in advance for reviewing my candidacy for this position.
+
+Sincerely,
+
+Shahbaz Malik

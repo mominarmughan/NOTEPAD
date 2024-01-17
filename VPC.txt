@@ -1,0 +1,97 @@
+VPC
+
+
+virtual private clod
+
+vpc peering
+
+vpc peerong mean vpc peer onother resion
+
+creat custum vpc
+
+go to vpc 
+
+name tag
+
+CIDR BLOCK    10.0.0.0/16   = 32
+
+main 16 bit is fix 10.0 is ke baat ke ip change ho ga
+ek number 08 bit ka hota hai
+
+Create subnet
+
+name tag  10.0.1.0_mumbai_aisa
+clrd block   10.0.2.0/24
+ do sabnet banana hai private publice
+private aur publice ke start ke do digit same rahe ge
+
+10.0.1.0/24
+10.0.2.0/24
+
+ 2 rought table banana
+private 
+publice
+subnet accocition  karna hai
+
+internergateway banane ke baad route table main ja rar 
+route  acces karna hai 
+
+us ke baad publec instace main ja car pem file ko dosre pem file
+cret karna hai
+aur permision change karana hai
+sudo su
+vi my.pem
+content copy
+chmod 400 my.pem
+any connect the private inctace throw publice inctant
+
+ssh -i "pem" ec2-user@13.235.77.3
+
+  NET GETWAY
+
+net getway provied  private instant to ping google .com
+
+
+creat net getway
+
+name 
+subnet  publice
+
+and allowcated elactc ip
+and go to rout table edit the rougt to net get way
+
+
+
+
+private subnet creat 
+name tag  10.0.2.0 privte
+creat interner gatway 
+TWO TYPE OF SUBNET
+
+creat two rout table
+publice private
+edit rout table
+go to subnet accosition
+choice publice subnet attach
+go to rougt and
+0.0.0.0/0
+internet getway
+and choce you vpc
+
+Net gatway
+network address traslation
+
+netgatway creat publice subnet
+
+
+go to internet getway and attach our vpc
+
+last go to your vpc
+
+select vpc    go to action button
+and enable publice hosts name
+
+PUBLICE
+PRIVATE
+152.57.30.131/32
+

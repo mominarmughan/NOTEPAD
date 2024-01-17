@@ -1,0 +1,13 @@
+	            kafka
+
+kafka is using realtime streaming perpose
+
+kafka broker or server
+
+sparks
+
+
+spark is a fram work
+sala is a lanugte
+sala lanugate execute by sparks
+spark is a inmemory proces

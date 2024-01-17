@@ -1,0 +1,46 @@
+Hadoop comand
+
+hadoop fsck /  ( check the underreplicate block)
+
+hadoop fs -ls /
+
+carrapted block delete 
+
+hadoop fsck / -delete
+
+create directory  
+hadoop fs -mkdir /input
+
+copy file to local to hadoop
+ two type of copy comaand
+
+hadoop fs -copyFromLocal hadoop fs -copyFromLocal LICENSE.txt /input/
+
+hadoop fs -put  README.txt /input/
+
+how to submeet the job
+
+job submision ke leye hadoop ke part part par hona caheye
+usr/local/hadoop
+
+hadoop jar hadoop-examples-1.2.1.jar wordcount /input/LICENSE.txt /output/wordcountoutput
+
+how to chek wordcount job
+
+ hadoop fs -ls /output/
+ hadoop fs -ls /output//wordcountoutput
+hadoop fs -cat /output/wordcountoutput/part-r-00000
+
+pie job
+
+hadoop jar hadoop-examples-1.2.1.jar pi 5 10
+
+check the report 
+
+hadoop dfsadmin -report
+
+how to check fsimage and edit log
+
+cd /usr/local/hadoop/tmp/dfs/name
+hadoop fs -get /user/data home/centos
+hadoop fs -put abc /user/

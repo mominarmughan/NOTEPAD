@@ -1,0 +1,355 @@
+                   LINUX MONITORING
+          
+     top
+	 this is sumary of system
+	
+	 top - 18:48:15 up 12 min,  1 user,  load average: 0.00, 0.01, 0.03
+Tasks:  85 total,   1 running,  83 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.3 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0
+KiB Mem :  1012940 total,   782416 free,   101212 used,   129312 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   769056 avail Mem
+
+real time main cpu utilazation agar 100 % bhui ho jaye tu koi baat nnai
+q ki hamare pass jitne core rahre haii us hisab se cpu utilasion hota hai jaise hamare pass 4 core hai tu hamara cpu full 100% 400 perseat per hoga
+
+shift +a se pid short kare ga
+
+top -u centos is se spafic user ke  detail mile ge
+
+press z se disply colour main ho jata hai 
+press c se disply absolute  parth
+
+vmstat
+free -g {free ram space}
+
+copy form local
+scp -i keyname fillname @centospubliceip:
+copy one server to onather server
+scp cacerts sshuser@privateip:/home/sshuser   {linux command and permision 55 minute}
+scp file.txt centos@172.31.15.218:/home/centos
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+                 USEER MANAGEMENT
+
+ADD USER
+useradd ammu
+
+ADD GROUP
+groupadd admin
+
+add user into Pramary  group
+
+usermod -g admin ammu
+
+secongary group
+usermod -a -G dev ammu
+
+how many group are user add
+id ammu 
+
+change user
+ su - faheem
+
+useradd to wheel geoup or sudo permision
+
+## Allows people in group wheel to run all commands
+#%wheel  ALL=(ALL)       ALL
+
+## Same thing without a password
+ #%wheel ALL=(ALL)       NOPASSWD: ALL
+
+remove # visudo fill
+and add the user into wheel group
+usermode -a -G wheel ammu
+update
+usermod -aG wheel ansible
+
+
+now user has sudo previllage
+
+how to access other user  directory
+first add group
+make sure primary group is same  both user
+usermod -g test ammu
+usermod -g test firdous
+chage the directory permision of user
+chmod 770 ammu
+now user acces other user direcory
+now go the firdous user
+cd  /home/ammu
+you enter ammu directory and you can access ammu dirctory
+touch ss
+fill create by firdous with ammu dirctory
+usermod --lock (username ) : to lock the user
+
+usermod --unlock (username) : to unlock the locked user
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+    cat command use
+ cat < /etc/passwd > output.txt (etc/passwd ka jo bhi content ho ga wo output.txt main aa jaye ga)
+
+ awk '{ print $2 }' /etc/hosts {print only that line}
+
+ diff : to compare the two files 
+diff file1 file2
+
+show ip address
+ip a or ifconfig -a
+
+how to check connectyfity 
+ping and ip addrees
+
+set the hostname
+hostname NAME
+
+rpm -qa : will display all the installed packages
+rpm -qa | grep vim  {seach the spacific package }
+
+ldd /bin/ls  (check the labary of the command)
+ls -R >> litdirectories.out {list all the command in one directory}
+free -g  {free ram space }
+ cat /proc/meminfo {all memory information}
+  cat /proc/cpuinfo {all cpu info}
+cat file.txt | cut -d: -f1 {file.txt se pahlie fild ko disply kare ga}
+ wc file.txt  {count the word of file}
+ grep someone ./* {grep kare ga simeone ko}
+ sudo mkdir -p /pune/mumbai/kolkata/dehli  {create multiple directory in single comand}
+ sudo mknod pipe p {make pipe diretory}
+                       premision  linkcount    user      group 
+ (-is regular fill )-rw-r--r--.  1  ec2-user ec2-user  0 Sep 21 10:59 ab
+(d  stand for directory) drwxr-xr-x.  2 root     root      6 Sep 24 11:08 data
+
+bydefalt linkcount value 2 in directory
+
+last working director cd -
+cd ../../../../etc  {ek ../se ek directory back jaye ga}
+ ll | grep selinux {seach the direcory our fill}
+ mkdir .abc touch abc {mske hidden direcory or fill} 
+ ls -ltra  watch hidden direcory or fil
+
+ ls -R {entrie directory ko present karta hai}
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                        CP COMMAD
+  [ec2-user@armughan home]$      sudo cp /etc/selinux/config /home/pune/{copy with absolut path} 
+  [ec2-user@armughan etc}         sudo cp config  /home/pune/    {copy with relevit part}
+                           sudo cp /etc/selinux/config /home/pune/data  {copy with rename directory}  
+   WHAT IS INOD NUMBER ? {INTERVIEW Q}                        
+   sudo touch /home/ansari/file.txt {absulut parth to create directory or fill}  
+   ln -s /home/ansari/file.txt /home/ansari/softlink_file.txt
+set the number of fill {go to fill vi file.txt command mde main rahna hai se  nu}
+remove number {se nonu} 
+ HARD LINK
+ hard link : ln source Destination
+ ln file.txt /home/centos/abc
+                  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+           CHMOD COMMAND
+ chmode : to change the permission
+
+4 r read
+2 w write
+1 x execute
+
+owner    group    other (for future use)
+rwx      rwx      rwx
+4+2+1=7   4+2+1=7     4+2+1=7
+
+chmode 777 file.txt (this command will open all the permission to all )
+
+default permission of file after creating it is 664
+)
+
+chown : to chnage the ownership
+
+chown root:root file.txt    
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                       SWICH USER
+  sudo su  (go to root) 
+  su faheem (swich user) 
+  exit root (exit root user)    
+
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                      kill command
+  jis tarha hum windows main end task karte hai use tarha hum linux main kill commad ka use karte hai
+  suppose muje koi task ko end karna hai tu sab se pahle us ka process id dekhw ge
+  ps -ef | grep yum {process id command}  
+  kill process id if  you want delete all the parent and child process {kill -9 process id}  
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                          SYSTEM INFORMATION
+  uname -a # Display Linux system information
+uname -r # Display kernel release information
+cat /etc/redhat-release # Show which version of redhat installed
+uptime # Show how long the system has been running + load
+hostname # Show system host name
+hostname -I # Display the IP addresses of the host
+last reboot # Show system reboot history
+date # Show the current date and time
+cal # Show this month's calendar
+w # Display who is online
+whoami # Who you are logged in as   
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+hostname  identfy machice  hostname
+whoami    which user login
+find command
+sudo find /home/centos / -name ammu
+
+list spasific fill
+ls folder*
+how to compress fill 
+tar cvf files.tar fill1 fill2
+untar
+gzip files.tar
+how to writen  fill normal 
+ gunzip files.tar.gz
+tar xvf  files.tar
+remove fill 
+rm fill1
+
+rename  fill our folder
+mv /home/centos/fill2 filla
+
+how to marge fill
+
+find any word 
+cat fill3 | grep abc
+cat fill3 | grep -i abc cash sansaty 
+
+How do you list the Hidden files in linux 
+ls -a 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+      LINUX Container
+ sudo apt install lxd lxd-client
+
+sudo lxd init
+
+lxc list
+
+lxc launch ubuntu:18.04
+
+lxc launch ubuntu:18.04 my-ubuntu
+
+lxc exec my-ubuntu -- /bin/bash
+
+cat /etc/*release*
+
+how to stop contener
+
+lxc stop my-ubuntu -- /bin/bash
+lxc stop sweeping-gnat -- /bin/bash
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                           NETWORKING AND FIREWALL
+ Networking command
+
+
+three types of network
+1 unicast network
+
+this type of network dont any of net 
+this is copy file without internet
+
+Router is distribute the single diffrent subnet
+
+class A ip 0 to 255 ip hoti hai
+
+192.168.192.32
+
+har ek opted 8 bit ka hota hAI
+
+
+
+how to block port and unbolock
+
+sudo yum install httpd
+sudo systemctl start httpd
+sudo systemctl status httpd
+
+
+sudo yum install firewalld
+sudo yum install firewalld
+ sudo systemctl status  firewalld
+
+sudo firewall-cmd --permanent --add-service=http
+
+sudo firewall-cmd --reload
+
+sudo firewall-cmd --permanent --add-service=https
+
+sudo firewall-cmd --reload
+
+
+     test the UI public IP
+
+
+
+
+firewall--cmd --list--all
+
+
+sudo firewall-cmd --permanent --remove-service=https
+
+sudo firewall-cmd --permanent --remove-service=https
+
+
+sudo firewall-cmd --reload
+
+firewall-cmd --list-all
+
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+
+firewall-cmd --permanent --zone=public --add-port=443/tcp
+
+
+firewall-cmd --list-all
+
+  check the ip of server
+nslookup ip address 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+                                 HOW TO DEPLOY NGNX SERVER
+
+
+
+  1)     sudo apt-get update
+sudo apt-get install nginx
+
+
+
+2)  Nginx registers itself as a service with ufw, our firewall, upon installation
+
+sudo ufw app list
+
+3)  sudo ufw allow 'Nginx HTTP'
+
+4)  sudo ufw status
+
+
+5)  systemctl status nginx
+
+     HOW TO STOP NGINX SERVER
+
+
+sudo systemctl stop nginx
+
+sudo systemctl start nginx
+
+
+                                                    

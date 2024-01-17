@@ -1,0 +1,61 @@
+microsoft azure
+
+ambari
+
+
+
+linux
+
+hard drve mount
+crontab
+usermod file permision
+cp server to server
+firewall
+
+
+cloud
+
+vpc
+ambari
+
+
+hadoop
+single node
+multinode
+active directory
+karbaroos
+ranger
+       
+
+
+              LINUX
+
+Creat Virtual machice
+change permision file or diretory  add user to group
+wheel Group
+linux monitoring
+HardDrive mount
+Firewall
+
+     AWS
+
+VPC
+single node closter
+multinode coloster
+EMR
+
+hadoop
+hdfs comand
+ambari
+clouera
+
+services
+
+hdfs
+yarn
+zookeeper
+ranger
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+

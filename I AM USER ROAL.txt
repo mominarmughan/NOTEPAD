@@ -1,0 +1,21 @@
+
+
+I  AM ROAL
+
+
+USER VIEW ALL THE SERVICES BUT NOT ALLOW 
+HE ONLY ALLOW THOWS SERVICE  TO  SET THE POLICY
+
+
+boudry se ek time main ek he policy add hoti hai
+
+agar ek time main do policy lagana hai tu boundry remove karna padta hai
+
+
+user ke policy set karte time agar user ko sab cheeze ke parmision bhi deete hai leken boundry ek thown is ko ek chheze ka he acces rahta hai
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+k8I71'|3
+
+     first create user 

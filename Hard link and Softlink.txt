@@ -1,0 +1,16 @@
+soft link create
+
+
+ln -s sf  tx
+
+
+soft link main do file edit hote hai  aur dono file ek saat edit ho jate hai 
+
+inode number ono file ka alag hota hai  soft link directory ko link karta hai
+
+hardlike main inode number alag hota hai   hadlink directory ko link nahi karta hai
+
+
+soft inke main gar orignal file delete hojate hai tu data dono file se delete hojata hai
+
+agar Hard link se oringnal file ka data delete hoja ta hai tu file  mai n data exie  rahta hai

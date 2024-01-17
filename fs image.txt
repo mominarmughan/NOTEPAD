@@ -1,0 +1,59 @@
+Let us understand about checkpointing
+
+fsimage and editlogs
+
+Namenode primary responsibility is to maintain the name space of HDFS that is the meta information about the HDFS
+
+what all files available within the HDFS, where it is located, its hierarchy
+
+what all blocks makes that particular file. All this meta information will be maintained by the
+
+Namenode. It maintains the Meta information as a part of
+
+the RAM. Any change happening to the HDFS file system it will update its metadata and it'll be available within the RAM and RAM
+
+is always volatile. So if the system gets restarted all the information
+
+will be lost. So every change it will keep on getting recorded into the
+
+editlogs. So there will be a editlog, it will keep recording all the changes happening to the metadata and this editlog is designed to
+
+keep on updating the changes. The historical changes will be available as a part of the editlogs
+
+At any point of time i can playback the editlog and regenerate the state what is available within the
+
+metadata. So if the system gets restarted i can playback the editlog and regenerate the state what was available within the
+
+metadata that is the RAM and playing back a huge amount of transactions from the editlog, it's going to be a time consuming task and
+
+the restart of the name node will take huge amount of time depending on the volume
+
+of the data we have as a part of editlog. So what we do, we do a operation
+
+saving the namespace or a checkpoint, we can call it with multiple names, the system will
+
+playback the editlogs and generate a file which is equivalent to what is available within the
+
+metadata. The exact snapshot of what is available within the meta data will be generated as a file and it will be stored as a
+
+fsimage. So that may be a question over here at this point of time why can't we
+
+keep updating the fsimage. fsimage is designed or it is efficient to read to make a small update or small change
+
+to the fsimage is not efficient
+
+say i am going to add a file or make a small property changed of a particular file making that particular entry changed in the fsimage
+
+will be more difficult or it will be a time consuming process or it will not be efficient
+
+and the same time reading the fsimage and populated in to the RAM and recreate
+
+the meta data will be much easier. So fsimage is designed to
+
+regenerate the state and to have a efficient run of name node
+
+    HOW TO CHECK FS IMAGE
+	go to hdfs configration and searach the directory naamenode
+	the name node directory dfs/nn
+	go to cd /dfs/nn
+	and check the fs image 

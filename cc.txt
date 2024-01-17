@@ -1,0 +1,19 @@
+Never mind hello Something hello 
+a soft link is actual link of orignal fill and  hard link is nirror copy of fill
+if actual fill delet soft link is no value inn other hand hard link if actual fill delet hard liink 
+istel exses
+
+
+36 node closter 
+1 gatway node
+2 master node
+3 zookeeper node
+30 worker node
+we have use family memory optimace
+16 core cup and 128 GB ram
+10 GB and 2 core asien for os perpose
+14 core and 126 GB is for yarn persose
+
+
+29 mint interview 
+24 mint remaing

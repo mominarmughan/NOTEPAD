@@ -1,0 +1,16 @@
+
+  fill check 
+
+/usr/local/hadoop$ hadoop fsck /
+
+make directory
+
+hadoop fs -mkdir / input
+
+hadoop fs -mkdir / output
+
+copy fill 
+
+hadoop fs -put LICENSE.txt /input/
+
+1)  hadoop fs -copyFormyLocal 2)  /usr/local/haddop/LICENSE.txt

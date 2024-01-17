@@ -1,0 +1,40 @@
+source  s3 bucket
+create bucket  {glue-full-demo}
+three folder create 
+data         scripts                temp-dir
+data ke uder customers-db us ke under dataload=270923 us ke undar fill upload kare ge 
+
+and than create a role glue-fullacces and adminstrater fullaccess
+go to glue concol create database {S3 URL MAIN customer-db kaurl de ge} databes ka name glue-db 
+us ke baad add table using crawer se craler create kare ge   customer-csv-crawler 
+crawler ko run kare ge aur jab clowler create ho jaye ga tu table main ja karrefreh kare ge
+us ke baad athena naam se s3 folder banaye ge
+aur athena main seeting main ja kar us kaa parh de ge
+aur qurey run kare ge
+
+Data Integration and ETL
+
+us ke baad etl permorm karna hai
+sab se pahle s3 main customer_databas main customer_parque naam ka folder create kare ge
+
+
+create job kare ge us main csv fill ka parth de ge aur distication main parquet fill ka parth de
+ job detaile main ja kar scrip aur temmp directoy ka parth de ge aur job ko save kare ge
+ aur job run kare ge
+
+us ke baad ek crowler create kare ge jis main parque fill ka parth de ge 
+us ke  baad athena se queey kare ge athena ko refreesh karna hota hai
+triger ke zarye hum jobs ko automat karte hai
+ye crawler se data le ga aur databases main load kar de ga
+
+                        AWS DATABREW
+  USER data ko clean kar sakte hai normalize kar sakte hai without writing code
+  250 readymade trasformation hai   
+
+   aws databrew feature
+   data cleaning
+   this is data preparation tool
+   discovey  of data
+   cleanse
+   trasform
+                      

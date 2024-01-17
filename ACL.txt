@@ -1,0 +1,25 @@
+ACL   (ACCEESA CONTROL LIST)
+ONLY ASING FILL OR DIRECTORY PERMISION NOT DATA BASE LEVEL
+acl is securty perpes
+he allow to user base security
+
+
+custum hdfs site 
+and add property
+add user
+ hdfs dfs -ls /
+duplicate tab
+sudo su
+su -hdfs 
+ hdfs dfs -mkdir /testacl
+hdfs dfs -mkdir  /user/ammu
+
+hdfs dfs  -chown ammu:ammu  /user/ammu
+
+hdfs dfs -ls  /user
+hdfs dfs -put test.txt /testacl/
+
+go to hdfs
+hdfs dfs -setfacl -R -m user:hadoop:r-x /dir
+ hdfs dfs -ls /
+ hdfs dfs -ls /testacl/

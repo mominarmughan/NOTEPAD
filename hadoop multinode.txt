@@ -1,0 +1,4 @@
+pscp -i multiap.ppk multiap.pem ubuntu@13.233.192.16:/home/ubuntu/.ssh
+
+scp -i multiap.pem multiap.pem ubuntu@13.233.192.16:/home/ubuntu/.ssh
+ 

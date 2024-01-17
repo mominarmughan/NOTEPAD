@@ -1,0 +1,25 @@
+            REQUIREMENT
+	 MINIMUM 3 INSTACE REQUIREMENT zookeeper service are required
+	 
+	 go the HDFS go to action button and enable ha buttun
+	 select the secondry hosts 
+	 and select 3 jurnal node 
+	 edit the fil jornal node directory 
+	 now complect the wizaard know HA working fine
+	 check the HA go to HDFS instance you can see to name node Active stanby
+	 stop active namenode you can see stanby namenode will be  automatice behavice active beause HA
+	 YOU CAN CHECK HA type hdfs command first late say make the directory fo hdfs now stop active name node 
+	 run again command you can acces the hdfs command beause of HA if instace not ha hdfs command not work so ha is cery important chapter  of our life
+	 
+	     HOW TO DISABLE HA 
+		 first to to hdfs action button select disable ha
+		 select namenode and secondry name node name node shoud select master
+		 cleak continue now ha will remove
+		 you can check ha remove our not 
+		 stop active name node and type hdfs command
+		 hdfs dfs -ls /
+		  Connection refused this error show
+		  start again hdfs active namenode now hdfs ccommand working fine
+		 
+	 
+

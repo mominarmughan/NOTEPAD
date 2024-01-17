@@ -1,0 +1,55 @@
+                       Real time
+
+
+
+1)     pepsioc env   (   project )
+
+
+2)  vpn or vpc   connect the clinet or user throw vpn this 
+
+ 
+
+         three type of  work 
+
+
+data enginer 
+data scienctic
+hadoop admin
+
+
+           HADOOP ADMIN WORK
+
+
+DEPLOYMENT OF CLUSTER
+USER MANAGMENT
+TROBULSHOOTING
+NEW DEPLOYMENT
+
+DEPLOYMENT OF CLUSTER
+
+
+CLUSTER DEPLYMENT CLUSTER PLANIG ETC
+
+USER MANAGMENT
+
+SUPPOSE i have 30 node ambari clusert 
+and 50 user have accese to this cluser
+
+every user id and password genret
+any query user to asing to fix the issue
+
+TROBULSHOOTING
+
+
+user not login any hive or any service to fix the issue 
+node attach deattch   
+harddrive mouth 
+suppse uer iscreat vm and any issue our work fix the issue
+
+issue is not fix we can supprt aws and azure team
+jab koi bhi issue aata hai tu user service ticket ki zarye hami inform karta hai
+service tickt ka phone hami ya user ko barna hota hai 
+
+
+
+

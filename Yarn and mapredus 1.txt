@@ -1,0 +1,55 @@
+          
+
+
+               MAP REDUSE
+
+
+  1)   Hadoop 1.x  two  main component 
+
+   hdfs and map redfuse
+
+  map reduse is programing perading for data procesing
+
+
+
+   yarn
+
+hadoop 2.x 
+
+is two more component 
+
+hdfs 
+yarn inside yarn map reduse
+
+haddop 1.x main jo ob tracker aur task tracker the wo remove ho ker hadoop 2.x main resouse manager  aur node manager ho gaye
+
+node manager is resposible two exicude the job
+resouse manager is resposible two kon se job ko kitna resouse dina hai wo kon se node main resouse dena hai ye resouse manager disid karta hai
+
+job tracker aur task tracker single point of failuer the
+resouse manager is also a single point of failure but us ke pass jitne resouse avalible hai jab tak wo falover hai ho ga
+resouse mean your CPU AUR RAM
+
+ the resouse manager is down you are unbavalible any type of job
+
+ hadoop job and yarn job are same
+
+Application master is also a slave component
+services
+
+yarn work flow
+ 
+  sapose i am client and i have submiting a job throw resouse manager resouse manager lauchin a application master wo koi bhi name node par am ko lauch kar sakta hai
+
+www.cloudera.com/productopensouce/appachehadoophtml
+
+suppose 2 jobs running in your cluster and stuck after somtime then what will you do?
+ANs: first we check the log and memory utilization and try to resolve it and if necessary them we will kill the job
+
+command to list down the jobs  yarn application -list 
+command to kill the jobs        yarn application -kill app id
+what is the port of RM           8088
+command to see the dfs used?     hdfs dfsadmin -report
+command to check the health of the cluster  hdfs fsck /
+command to list down the port of particuler services  netstat -anp | grep service name
+

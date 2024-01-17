@@ -1,0 +1,40 @@
+create to ec2 instace in same az
+create sg
+port ssh nfs all trafic both inbond and outbond
+sudo hostsname sw1
+sudo hostsname sw2
+sudo mkdir efs
+
+sudo yum install amazon-efs-utils -y  run the comand bothinstace
+
+sudo mount -t efs -o tls fs-0a649e5a985c89902:/ efs      run the comand both instace
+
+cd efs
+vi /ammu
+hi thhis is aamu
+
+you can edit, remove fill immeduty you can see second instace same fill hear
+
+
+vpc end point is use for without attach nat gatway to comunicate internet is thiis vpc end point it is not charge by aws
+     VPC ENDPOINT
+	 CREATE VPC
+	 CREATE TO INACTACE PRAVATE AND PUBLICE
+	 COPY DEMO.PEM PUBLICE SERVER
+	 GO TO PUBLICE SERVER SSH PRAVATE INCTACE  IP ADDRESS 
+	  ssh 10.0.140.225
+	   sudo chmod 700 demo.pem
+	   ssh -i demo.pem ec2-user@10.0.140.225
+	   sudo hostname pravate
+	   bash 
+	   create vpc endpoint
+	   use se baad iam role modefiy kare ge ec2 main ja kar 
+	   
+	   10  and 12  ded result date and certifate issu date and grade 
+	   distic and subdistic
+	   220214303030029
+	   220214303030029 
+	   ctet certicicate number      4524053  
+	   
+	   6 8 13 17 26 31
+	   b.a ke marksheet and mscit 

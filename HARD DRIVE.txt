@@ -1,0 +1,38 @@
+       HOW TO MOUNT HARD DRIVE
+
+  lsblk
+  parted /dev/xvdf
+   mklabel gpt
+
+unit GB
+mkpart primary 0 10GB
+
+quit
+
+fdisk  -l /dev/xvdf
+ mkfs.xfs  -f  /dev/xvdf1
+
+mount /dev/sdb1  /opt/data
+
+show hard drve
+df  -TH
+
+cat  /etc/fstab
+
+reboot machine
+
+ls -tr /etc/|grep fstab
+cp /etc/fstab/etc/fstab.org
+ls -tr /etc/ | grep fstab
+
+vim  /etc/fstab
+
+blkid
+
+copy the UUID (  UUID=54ed9256-4d7a-4762-8ea5-e86f3773e2ea  /opt/data  xfs  defaults   01  )
+
+
+
+df -TH
+
+UUID="8c6cbe72-4bf1-4dcd-b252-c8c7d925edcd"

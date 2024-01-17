@@ -1,0 +1,46 @@
+microsoft azure
+
+clod concep   15 to 35 %
+30 to 35 Azure core service
+25 30  security privacy compliancs trust
+20 25 pricing and support
+
+marks  700 /1000
+three are 40 to 60 Question
+Format of Question
+multile choice
+multiple answer
+Dra and drop
+Hot Area
+
+Duration of exam 60 min
+
+The abilty of a system to automatically
+grow and shrink based on dwmand
+
+Agility
+
+Type of clod computing
+
+inf
+
+azure deployment model
+publice cloud
+everything built on the cloud provider Also know as clod Native
+
+the abi 
+
+High Durability
+your ability to recover from a disaster and
+ to prevent the loss of data solution 
+
+      Region and Geography 
+
+A region is a grouping of multiple datacenters ( Availability Zone )
+Azure has 58 regions availiable across 140 countries
+
+   paired regions
+
+each region is paired with another region 300 miles aways
+  only one region is updated at a time to ensure no outages
+some azure servivces rely on paired regions for disaster recovery

@@ -1,0 +1,14 @@
+Explain the differences between Amazon RDS and Amazon DynamoDB.
+
+Answer: Amazon RDS is a managed relational database service, while Amazon DynamoDB is a managed NoSQL database service. RDS supports various relational databases, whereas DynamoDB is designed for high-performance, scalable NoSQL databases.
+
+7. Question: Can you explain the differences between EBS and instance store volumes?
+
+Answer: Amazon EBS (Elastic Block Store) provides persistent block-level storage volumes that can be attached to EC2 instances. Instance store volumes, on the other hand, are temporary storage associated with the EC2 instance that is lost when the instance is stopped or terminated.
+
+ Question: What is a bucket in Amazon S3?
+
+Answer: A bucket is a container for storing objects in Amazon S3. Every object is contained within a bucket, and each bucket must have a globally unique name within the S3 namespace.
+
+7. What is a route table in Amazon VPC?
+A route table defines the rules for routing traffic within a VPC. It determines how traffic is directed between subnets and to external destinations.

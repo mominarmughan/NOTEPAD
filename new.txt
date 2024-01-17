@@ -1,0 +1,26 @@
+what is diffrent between ssh and telnet
+telnet trasfer data simple text format and other hand ssh trasfer data encyripted format
+
+what is diffrent between soft lik and hard link
+soft link is actual link of fill and hard link is a mirror copy of  fiil
+if actual fill delete soft link is no value im other hand hard link if actual
+fill delet hard link is still exict beause of mirror copy of fill
+
+how to check process id of service
+ps -ef | grep service name
+
+what is the diffrent between acl and chmode
+the main diffrent between acl and  chmod is chmod provide fill level or directory level 
+permision and  acl provide user bases security
+
+what is yarn
+YARN stands for “Yet Another Resource Negotiator“. It was introduced in Hadoop 2.0 to remove the bottleneck on Job Tracker which was present in Hadoop 1.0. YARN was described as a “Redesigned Resource Manager” at the time of its launching, but it has now evolved to be known as large-scale distributed operating system used for Big Data processing. 
+
+yarn full form is yet a onater resurese negosiater 
+yarn have 3 component
+rm
+ap 
+noemageer
+yarn stand for yet a another resouse negosiater it was introduse hadoop 2
+it botal nek job tracker 
+

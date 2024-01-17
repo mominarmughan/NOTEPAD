@@ -1,0 +1,28 @@
+     how to creat snap shot
+	 first go to hdfs user
+ first allow directory to snapshop command is
+  sudo -u hdfs hdfs dfsadmin -allowsnapshot /user/smaple
+  create snapshot     
+sudo -u hdfs hadoop fs -createSnapshot /user/
+watch snapshort
+ hadoop fs -ls /user/.snapshot
+delect snapshort
+sudo -u hdfs hadoop fs -deleteSnapshot /user s20211118-064555.663
+disallow user to snap short
+sudo -u hdfs hdfs dfsadmin -disallowsnapshot /user/
+                 HDFS COMMANDS
+make directory hdfs 
+sudo -u hdfs hadoop fs -mkdir /sample
+change directory permision
+sudo -u hdfs hdfs dfs -chmod -R 777 /user
+change owner ship prmision
+sudo -u hdfs hdfs dfs -chown supergroup:supergroup /user
+copy data local to hdfs 
+hadoop fs -copyFromLocal /home/centos/data /user or hadoop fs -copyFromLocal /home/centos/data /user/yarn
+copy to local
+hadoop fs -copyToLocal /user /etc/
+copy file to hdfs
+hadoop fs -put abc /user/
+hadoop fs -appendToFile abc /user/abc
+remove file to hdfs
+hadoop fs -rm /user/abc

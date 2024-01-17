@@ -1,0 +1,28 @@
+vim test1.sh
+echo $"this is print by crontab"
+:wq!
+
+
+crontab -e
+
+ * * * * * /root /test.sh >> /tmp/log8202020.out
+:wq!
+
+vim test1.sh
+chmod +x test
+sleep -m 2
+
+crontab -e
+
+
+ * * * * * /root /test.sh >> /tmp/log8202020.out
+
+date
+
+ls -ltr /tmp/
+
+
+cat /tmp /log8202020.out
+
+cat /tmp /log8202020.out
+

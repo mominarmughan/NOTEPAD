@@ -1,0 +1,103 @@
+sudo yum install wget vim -y
+
+sudo vim /etc/hosts
+privat ip and privat dns 
+
+172.31.40.1 ip-172-31-40-1.ap-south-1.compute.internal hdp-nn
+
+setup ssh
+
+ssh-keygen
+
+cd ~/.ssh
+
+cat id_rsa.pub >> authorized_keys
+
+chmod 700 ~/.ssh
+
+chmod 600 ~/.ssh/authorized_keys
+
+ssh hdp-nn
+
+exit
+
+sudo yum install -y ntp
+
+sudo systemctl enable ntpd
+
+
+ls -ltr /etc/systemd/system/multi-user.target.wants/ntpd.service | grep /usr/lib/systemd/system/ntpd.service
+
+
+ sudo systemctl start  ntpd
+
+ sudo systemctl status  ntpd
+
+Disable SElinux
+
+ sudo vim /etc/selinux/config
+
+and disabled se linux
+
+swich to root
+
+sudo su
+
+echo umask 0022 >> /etc/profile
+
+exit root
+
+sudo wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.7.3.0/ambari.repo -O /etc/yum.repos.d/ambari.repo
+
+yum repolist
+
+install ambari server 
+
+sudo yum install ambari-server
+
+sudo ambari-server setup
+
+sudo ambari-server start
+
+and check the tail comand and show the real time lock
+tail -f  
+
+check UI 
+
+publice ip 
+
+52.66.198.168:8080
+
+hostname -f
+
+ sudo vim /etc/python/cert-verification.cfg
+
+sudo vim /etc/ambari-agent/conf/ambari-agent.ini
+
+force_https_protocol=PROTOCOL-TLS-2
+
+install java conncetor
+
+sudo yum install mysql-connector-java
+
+copy this parth
+
+sudo cp /usr/share/java/mysql-connector-java.jar /var/lib/ambari-server/resources/
+
+
+command line 
+
+ls -ltr /home/
+swich to root 
+su - hdfs
+
+chek log fill
+
+cd /var/log/hadoop
+check underreplected block
+hdfs fsck /
+
+3 data base
+
+
+ 

@@ -1,0 +1,9 @@
+                                                          ATHENA
+FIRST CREATE BUCET AND create two folder input and output upload the data in input directory  (custume.csv fill 
+And create kiness data steam and data fire fhouse
+Data firehouse main data stream ka socuce
+And s3 ke bucket ka distination dena hota hai
+Us ke baad athena main workgroup create kare ge us main out put directory ka parth de ge
+Use se baad aws glue main data base create kare ge jis main s3 main ja kar custumer.csv ka parth dege (s3://demo-test-athen/input/ {NOTE INPUT DIRECTORY KO SELECT KARNA HOTA HAI AGAR HUM CUSTUMER.CVS KO DIRECT SELET KARE GE  TU HUME DATA NAHI DEKE GA}
+us ke bbaad clower create kare ge AUE CLOWER RUN KARE GE US KE BAAD TABLE mainja kar table refresh kare ge
+us ke baad athena main databaase select kare ge aur workgroup select kare ge table preview kare ge

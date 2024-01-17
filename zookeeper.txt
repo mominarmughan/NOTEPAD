@@ -1,0 +1,33 @@
+       
+
+            ZOOKEEPER
+
+zookeeper is a coloster codination server
+zookeeper is codenate amang the services
+zookeper is resposible to comunicate all the services
+
+ooleeper is distributed coordinate service   
+zookeper is a server (master)
+zookeper failure contoler ( slave or clinet
+zookeeper file properties
+cd /etc/zookeper/conf/
+
+ZooKeeper is a distributed coordination service used to manage and synchronize processes in a distributed system. It provides a simple and reliable way for applications to coordinate tasks, share information, and maintain consistency across multiple nodes in a cluster. To explain ZooKeeper in simple language, let's use an analogy of a group of friends planning a surprise birthday party for their friend Alice:
+
+Imagine that you and your friends want to plan a surprise birthday party for Alice. However, coordinating all the tasks among friends can be challenging. Everyone has their own schedules and needs to know what others are doing to avoid conflicts. This is where ZooKeeper comes in!
+
+Coordinator (ZooKeeper): In our scenario, you are the "coordinator" (ZooKeeper). Your primary role is to manage the party planning and ensure that everyone is on the same page.
+
+Party Tasks (ZNodes): You create a "to-do list" that contains all the tasks needed to organize the party, like sending invitations, buying decorations, ordering the cake, etc. Each task is represented as a "ZNode" in ZooKeeper.
+
+Party Planners (Nodes): Your friends are the "party planners" (nodes) in the system. Each friend can access ZooKeeper to see the list of tasks and claim a task they want to handle.
+
+Task Assignment and Synchronization: When a friend decides to take up a task, they "lock" the corresponding ZNode in ZooKeeper, ensuring that no one else can take that task. This prevents conflicts and duplication of efforts.
+
+Updates and Notifications: Whenever a task is completed, the friend updates the ZNode to mark it as done. Other friends receive notifications from ZooKeeper about the changes, so they always have the latest status of the party planning.
+
+Consensus and Reliability: ZooKeeper ensures that there is a consensus among the party planners. If one of your friends leaves the planning group or loses connection, ZooKeeper makes sure that someone else takes up their tasks so that nothing is left undone.
+
+By acting as a centralized coordinator, ZooKeeper simplifies the process of organizing the party, improves coordination among friends, and ensures that the surprise birthday party for Alice is a huge success!
+
+In real-world scenarios, ZooKeeper is widely used in distributed systems like Hadoop, Kafka, and HBase to manage tasks, coordinate processes, and maintain consistency across multiple nodes, making it easier to build reliable and scalable applications.

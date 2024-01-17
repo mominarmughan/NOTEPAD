@@ -1,0 +1,45 @@
+make multipul directory
+
+mkdir -p pune/mumbai
+
+jab bhi koi file ceate karte hai tu us ka wardkot walu  1 aata hai
+
+jab koi directory creat karte hai tu us ka ward cout walu  2 aata hai
+
+
+check indired directory
+rename the file mv a b
+
+server to server copy
+
+
+scp file  ec2-user@ec2-13-59-138-114 : /home/sshuser
+
+soft link short cut ke tarha use hoti hai  2 file ke content ek saath edit hote hai
+
+soft link ka inode number same hota hai
+
+set the number of file
+
+comand mode
+: nu
+
+remove the number
+:  
+
+
+
+file permision 
+
+4 for read
+2 for write
+1 for exe
+
+
+copy multiple file our directory
+
+cp -r ammu /home/
+
+r sync comand use
+
+agar koi network intepap aata hai tu rsync  comand se kitne file copy hoi hai us ka pata chalta hai

@@ -1,0 +1,66 @@
+Networking command
+
+
+three types of network
+1 unicast network
+
+this type of network dont any of net 
+this is copy file without internet
+
+Router is distribute the single diffrent subnet
+
+class A ip 0 to 255 ip hoti hai
+
+192.168.192.32
+
+har ek opted 8 bit ka hota hAI
+
+
+
+how to block port and unbolock
+
+sudo yum install httpd
+sudo systemctl start httpd
+sudo systemctl status httpd
+
+
+sudo yum install firewalld
+sudo yum install firewalld
+ sudo systemctl status  firewalld
+
+sudo firewall-cmd --permanent --add-service=http
+
+sudo firewall-cmd --reload
+
+sudo firewall-cmd --permanent --add-service=https
+
+sudo firewall-cmd --reload
+
+
+     test the UI public IP
+
+
+
+
+firewall--cmd --list--all
+
+
+sudo firewall-cmd --permanent --remove-service=https
+
+sudo firewall-cmd --permanent --remove-service=https
+
+
+sudo firewall-cmd --reload
+
+firewall-cmd --list-all
+
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+
+firewall-cmd --permanent --zone=public --add-port=443/tcp
+
+
+firewall-cmd --list-all
+
+  check the ip of server
+nslookup ip address 
+

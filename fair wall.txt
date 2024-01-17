@@ -1,0 +1,10 @@
+
+
+sudo apt-get update
+
+sudo apt-get install nginx
+systemctl status nginx
+
+cat ~/.ssh/authorized_keys  (check pem fill
+
+

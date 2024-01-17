@@ -1,0 +1,20 @@
+      MICROSOFT AZURE CLOUD
+
+
+Three type of accses in azure
+
+
+globle acces
+
+
+
+55 mint
+
+
+ 
+auto scaling    due to auto scaling number of server increse or distese
+
+auto scaling is a two type one horizitel and second virtical  
+load blacwer  load blacer distibue the trafic
+
+blob storeg    

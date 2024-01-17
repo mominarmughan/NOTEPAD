@@ -1,0 +1,79 @@
+hdfs architature
+ranger
+karbaros
+yarn
+sparks
+kafka
+linux basic
+   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+   ec2
+   iam
+   vpc
+   emr
+   rought 53
+   kiness
+   msk
+   glue 
+   athena
+   rds
+   linux basis
+   data lake is centrol repositroy to store stutaue and semi data
+   collection of tables is databaes 
+
+   lauch ec2 instace to coonect rds
+
+  abhishec vermala
+
+  impreretive concent
+  anceble
+  teraform
+  github
+  git
+  
+
+  {
+"firstName":"{{name.firstName}}",
+"lastName":"{{name.lastName}}",
+"id":{{random.number(70)}},
+"ip":"{{internet.ip}}"
+}
+
+day to day activity
+
+https://awslabs.github.io/amazon-kinesis-data-generator/web/help.html
+
+
+
+is a adv
+O.
+
+win + shift t 
+
+poc<ez Ln O - source Cenkrahsed la+rr
+eSi ned Crea&e, deploy and *f.N-n eplJcakons
+oc(er uses Conéo.oner on hose OS
+apprcabons 0-10?Lc-.A.Enu
+Kerra a S Skern
+n hose Cornpu&e» Cha-n
+recki a 0• S
+docker on any O' S
+ocker en ire runs noæve-) on
+Docker
+Docker is a
+/ OS Gn4-cunerizakon
+uzo problxn
+0k a Coae-
+
+
+troduction to Terraform and lac
+this session, we'll introduce you to the fundamental cc
+erraform is crucial for managing infrastructure and how
+stalling Terraform on MacOS, Linux and Windows 
+
+poche-x nd a od
+Reture-z rtch
+pwd& — print the current working directory
+
+TECHNICAL
+GUFTGU

@@ -1,0 +1,190 @@
+Git is a version countroler /source code managment tool
+too types of version countroling 
+centralized and distrubed
+centralized is out dated
+3 types of file in git
+1) untrack fill 2) stages file 3) commited file {commited file is also know as local repo}
+by  defalut evey file is untrack file  
+INSTALL TO INSTACE WITH DIFFRENT REGION
+in security group allow two outbound role
+ssh and http
+{sab se pahle hume workspace main aana ho ga us ke baad he hum work kar sakte hai mumbaigit ye work space  hai}
+
+new token
+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
+
+first update the machice
+sudo su
+both the instaace
+yum update -y       
+yum install git -y    
+which git 
+git --version  {check version}
+git version 2.40.1
+git config --global user.name "ammu"
+git config --global user.email "ammu@gmail.com"
+git config --list {check create or not}
+
+git config --global user.name "armu"
+git config --global user.email "armu@gmail.com"
+git config --list {check create or not }
+
+create directory in mumbai region 
+go to that directory & type command
+git init
+create fill in that directory
+fille.txt
+git add .
+git status
+
+comment the file
+git commit -m "my  first commitfor mumbai"
+git status
+gt log
+to exit git log type Q
+if you want oneline log git log --oneline
+git show c9deb9ff94c95dd646ed8676c12e6d5b39064197  {git show se file save hote hai}
+
+go to  git hub log in to git hub
+ctrate repository
+copy url for repo
+git remote add origin https://github.com/mominarmughan/
+ git remote {to see how many remote dirctory}
+cen-git.git {this command help you to connect your hithub or central repo connection}
+
+push repo to master branch
+git push origin master
+
+copy username and paasword
+mominarmughan
+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
+go to your github repo you can se all the file you can save earler in hub 
+update comment aopar nazar aata hai 
+if you want update that file and update push the central repo
+added specif file you want
+and process add git .
+coomit
+git push origin master
+
+secong line edit
+ my  second commitfor mumbai
+
+diff --git a/file1 b/file1
+index a60ee64..e039be3 100644
+--- a/file1
++++ b/file1
+@@ -1 +1 @@
+-this is my first hit  file for demo puppose
++second line
+
+go to singapue region 
+create directory
+git init
+{note pull karne ke liye dono instace diffrent region main hona chayeyee}
+git remote add origin https://github.com/mominarmughan/cen-git.git
+git pull origin master
+
+git commit -m "singapue" 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                    git ignore command
+  first create and edit .gitignore
+
+  vi .gitignore
+  *.java
+  than add to git than check the status than commit the file and than create files like file.java file.txt like and than check status go can show only .txt file
+
+ git add .
+git status
+git commit -m "ignore file format"
+touch 1.txt 2.java
+git status
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ branch
+
+ go to  mumbai.git
+ git log --oneline {that show all the log  file you commiteed in one line} 
+
+ git branch {show the brach}
+ git branch shahbaz {create a branch}  
+ git checkout shahbaz  {go to that branch} 
+  git branch -d shahbaz {delete the branch} 
+git merge  armughan  {merge the branch }  {jis branch main merge karna hai use ke dosre branch main jana hai jaise mere armughan branch ko mastewr main merge karna hai tu pahle master main jana ho ga aur phir git merge  armughan karna ho ga tu armughan main jitne file ho ge sab aa jaye ger }
+git stash {file go to stash}
+git stash clear {clear the stash item}
+ab jab jab file ko khol kar dekhe ge tu us main kuch nahi ho ga stash main data chale jaye ga
+
+git stash apply stash@{0}   {us se jo code tha wo wapish aa jaye ga}
+git reset --hard {staging area aur working space  sab jagha se  delete ho jaye ge}
+         {NOTE}
+  jab tak file ko commit or add nahi kare jab tak ho fill sabhi branch 
+   dekhe ge jaise he hum use file ko add ka de ge wo hame spacific branch main dekhe ge
+
+   branch ko delete karne se pahle use brach se checkout karna hota hai
+
+   git add .
+   git commit -m "mysecond commit for shahbaz"
+   git checkout master
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+how to reset your code
+vi abc >edit the file >>>>>>>ammu 
+git add .
+and  want to add some code 
+git reset .
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+revert command 
+vi revertfile
+git add .
+git commit -m "my second commint for mashroom"
+git log 
+git revert f03f4a95de78de27a0d14d299212db26c3ca7bf1  {this is git log git revert f03f4a95de78de27a0d14d299212db26c3ca7bf1 }
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ un track file deleting command 
+
+ git clean -n { dry run }
+ git clean -f {foursfully delete }
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+   tag for commit
+
+  git log --oneline
+  
+  git tag -a imp -m "this is very imp commit" 
+git tag 
+
+git tag -d imp
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+clon command 
+git clone https://github.com/mominarmughan/cen-git.git
+
+when you creatt new branch data will copied  exicting branch 
+
+hame sab se pahle data ko master repository main lana hota weaha se centraal repo main beeje ge
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+clone the repo {us se hum ek repo se dosre repo ko clone kar sakte hai}
+git clone aur repo  name {jis repo ko hume clone kar ke lana hai}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+jis bhi file ko ignore karna hai us ke liye .gitignore
+file main edit kare ge
+*.java
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+jab bhi hume koi new folder main git ko run karna hai tu sab se pahle git init command chalaye gee
+
+
+
+

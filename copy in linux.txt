@@ -1,0 +1,15 @@
+cp command
+agat directory copy karene hoto cp -r use karte hai
+
+first create fill abc 
+supposer file is created home dirextory 
+
+cp abc /opt
+ek jaggah se dosre gagha jaye binna copy karene hoto
+ cp -r /var /home/xyz
+ 
+ two type  of copy absulote path copy relative path 
+ if i rename  copuy file
+ 
+ cp xyz /home/centos/pune/mumbai/army
+ cp /home/centos/pune /home/centos/pune/mumbai

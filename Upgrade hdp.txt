@@ -1,0 +1,103 @@
+     
+                       UPDARGE AMBARI
+
+
+1)  backup conf file
+swich to root 
+
+cd 
+mkdir ambari_backup
+cd /etc/ambari-server/
+cp  -r conf / root/ambari_backup
+cd /root/ambari_backup
+
+2)   stop all hosts ambari agent 
+ambari-agent stop 
+cat /etc/hosts
+
+3)  stop  ambari-server
+sudo ambari-server stop
+
+4)   For RHEL/CentOS/Oracle Linux 7: copy all the node
+
+wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.7.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo
+
+5)  For RHEL/CentOS/Oracle/Amazon Linux:
+
+sudo yum clean all
+
+57 mint
+sudo yum upgrade ambari-server
+yum info ambari-server
+sudo yum upgrade ambari-agent  (copy all the node)
+
+6)  For RHEL/CentOS/Oracle Linux 7, Amazon Linux 2:
+rpm -qa | grep ambari-agent  (check all the node)
+
+7)  Upgrade Ambari Server database schema. On the host running Ambari Server:
+
+sudo ambari-server upgrade
+
+8) Start the Ambari Server. On the host running Ambari Server:
+
+ambari-server start
+
+9)  Start all Ambari Agents. On each host in your cluster running an Ambari Agent:  (start each node)
+
+ambari-agent start
+
+10)  Checkpoint HDFS
+Perform the following steps on the NameNode host. If you are configured for NameNode HA, perform the following steps on the Active NameNode. You can locate the Active NameNode from Ambari Web > Services > HDFS in the Summary area.
+
+Check the NameNode directory to ensure that there is no snapshot of any prior HDFS upgrade. Specifically, using Ambari Web, browse to Services > HDFS > Configs, and examine the dfs.namenode.name.dir in the NameNode Directories property. Make sure that only a /current directory and no /previous directory exists on the NameNode host.
+
+Create the following log and other files. Creating these logs allows you to check the integrity of the file system after the Stack upgrade.
+
+As the HDFS user, 
+ 
+
+(check the active namenode on hdfs )
+
+11)  cd  /hodoop/hdfs/
+ls -ltr
+cd namenode
+ls -ltr
+
+
+12)  sudo su
+su - hdfs
+hdfs fsck / -files -blocks -locations > dfs-old-fsck-1.log
+hdfs dfsadmin -safemode enter
+hdfs dfsadmin -saveNamespace
+cd /hadoop/hdfs/namenode/
+cd current
+hdfs dfsadmin -safemode leave
+
+13)  hdfs dfsadmin -allowSnapshot /apps/hive/warehouse
+
+14)  hdfs dfs  -createsnapshot /apps/hive/warehouse
+
+
+15)  Click Manage Versions.
+
+Proceed to register a new version by clicking Register Version.
+
+Select the software version and method of delivery for your cluster.
+
+Choose HDP Stack.
+
+Available HDP minor versions display on tabs. When you click a tab, Ambari displays available maintenance versions for that HDP Stack on a drop-down list. When you click a specific maintenance version, a list of available Services and their version displays in a table.
+
+Choose HDP Version.
+
+16)   manage version
+and install package  (before install service will stop)
+
+17) auto start setting disabled
+
+cd bin
+
+yum upgrade ambari-monitor ambari-metrics-hadoop-sink  ( all the hosts )
+
+1:37
+

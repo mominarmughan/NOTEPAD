@@ -1,0 +1,13 @@
+explan zookeeper architecture 
+zookeeper is a coloster codination server
+zookeeper is codenate amang the services
+zookeper is resposible to comunicate all the services
+
+zooleeper is distributed coordinate service   
+zookeper is a server (master)
+zookeper failure contoler ( slave or clinet
+zookeeper file properties
+cd /etc/zookeper/conf/
+
+what is the perposee of zkfc?
+the perpose of zkfc is continusly  checking name node and secnodrly name node is live or not at any time namenode is nit respose the he make standby name node to active name node

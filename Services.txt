@@ -1,0 +1,52 @@
+       Ambari Matris
+
+check the uses of data node 
+
+check the cpu utilasation
+
+       
+
+ Sqoop 
+
+
+is used to load the data from any RDBMS to hadoop eco system
+is basicly used by data trasfer
+
+sqoop is use to jdbs connector
+
+
+
+         Oozie
+
+oozie is use to scuduling a job  hadoop echo system like linux cron tab
+
+
+        zeeplin jupiter Rstudio 
+is use data anyalise or data science perpase
+
+
+
+spark
+
+spark is a fram work
+
+
+
+kafka
+kafka is use byb event scrip
+
+atm swapping facebook data 
+
+
+   Hbase
+
+keybase 
+rdbms data base
+Grap orited data base
+large volume of data inside the table
+
+zabix is use linux monitoring
+grifana is use by hadoop monitotring
+
+
+Nifi

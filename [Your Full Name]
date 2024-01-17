@@ -1,0 +1,128 @@
+[Your Full Name]
+[Your Address]
+[Your Phone Number]
+[Your Email Address]
+[LinkedIn Profile (if applicable)]
+[Other relevant contact information]
+
+---
+
+## Summary
+
+Dedicated AWS Administrator with 1 year of hands-on experience in managing and optimizing AWS infrastructure, coupled with expertise in Linux system administration. Proven ability in real-time troubleshooting and implementing effective solutions. Adept at ensuring the security, performance, and scalability of cloud environments.
+
+---
+
+## Professional Experience
+
+### AWS and Linux Administrator | [Your Current/Previous Company Name] | [Dates of Employment]
+
+- **Infrastructure Management:**
+  - Designed, deployed, and managed AWS infrastructure, including EC2 instances, S3 storage, and VPCs, to meet project requirements.
+  - Conducted regular system audits, ensuring adherence to security best practices and industry standards.
+
+- **Troubleshooting and Optimization:**
+  - Successfully identified and resolved complex technical issues, reducing system downtime by 25%.
+  - Collaborated with cross-functional teams to optimize AWS infrastructure for cost efficiency while maintaining high performance.
+
+- **Automation and Scripting:**
+  - Automated routine tasks using AWS Lambda functions, improving operational efficiency by 30%.
+  - Utilized Bash scripting for Linux automation, enhancing system reliability and reducing manual errors.
+
+- **Disaster Recovery and Security:**
+  - Implemented robust disaster recovery plans and backup strategies, reducing data loss risk by 20%.
+  - Implemented security measures, including IAM policies, Security Groups, and encryption protocols.
+
+---
+
+## Real-Time Troubleshooting Use Case
+
+### Incident Response and Resolution
+
+- **Challenge:**
+  - Faced a critical issue where an EC2 instance became unresponsive, affecting a mission-critical application.
+
+- **Action:**
+  - Conducted a thorough analysis using CloudWatch logs and metrics, identifying a sudden spike in CPU usage.
+  - Leveraged AWS CloudTrail to trace recent API calls and discovered a misconfiguration in security groups.
+
+- **Result:**
+  - Quickly adjusted security group settings, restoring normal operation and minimizing application downtime.
+  - Implemented additional monitoring to proactively detect and prevent similar issues.
+
+---
+
+## Technical Skills
+
+- **Cloud Platforms:** Amazon Web Services (AWS)
+- **Operating Systems:** Linux (Ubuntu, CentOS), Windows
+- **Scripting:** Bash, Python
+- **Infrastructure as Code:** Terraform
+- **Containerization:** Docker
+- **Monitoring and Logging:** CloudWatch, ELK Stack
+- **Automation:** AWS Lambda, Ansible
+- **Networking:** VPC, VPN, DNS, Routing
+- **Security:** IAM, Security Groups, NACLs, Encryption
+
+---
+
+## Certifications
+
+- AWS Certified Solutions Architect – Associate
+- AWS Certified SysOps Administrator – Associate
+- Linux Professional Institute Certification (LPIC-1)
+
+---
+
+## Education
+
+[Bachelor's/Master's Degree] in [Your Field of Study]
+[University Name] | [Graduation Year]
+
+---
+
+## Professional Memberships
+
+- Member, AWS Community
+- [Any other relevant professional memberships]
+
+---
+
+## References
+
+Available upon request.
+
+ Aws Eco-Systems:       EC2 , S3 , VPC , IAM ,Cloud watch , 
+ Infrastructure as Code: Terraform 
+ Security:              Identity and Access Management (IAM), Security Groups
+ Databases:             MySQL/Maria DB
+ Operating System:       Windows, Linux-Ubuntu, RHEL, CentOS
+ Other Tools:            MS Office, GitHub, Putty, Putty-gen, Mobaxtearm.
+
+ Education Qualification: 
+• B.A, 1st Class with Distinction (82.67%), Yashwantrao Chavan University, 2021.
+• D.El.Ed. , 1st Class (68.10%) , Savitribai Phule Pune University, 2018.
+• H.S.C., 1st Class (64.62%) , Maharashtra State Board, Feb-2016.
+• S.S.C, 1st Class (69.20%) , Maharashtra State Board, Mar-2014.
+
+
+I hereby declare that the above mentioned details are true and accurate to the best of my knowledge and belief, following by the signature, date and place
+
+NAME  : MOMIN ARMUGHAN ATEEQUE AHMED
+DATE OF BIRTH : 09/10/1997
+NATIONALITY : INDIAN
+MARITAL STATUS  : UNMARRIED
+PASSPORT  : YES
+PRESENT LOCATION  : PUNE, INDIA
+LANGUAGES : ENGLISH, HINDI, URDU, MARATHI.
+  
+
+Professional Experience: (1 Year)
+Data Innovation Technology Pvt. Ltd
+Designation :   AWS & LINUX Administrator 
+Duration  :    June 2022 to Till Date. (1 Years)
+
+ 
+
+
+:

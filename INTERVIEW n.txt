@@ -1,0 +1,282 @@
+ intodusion your self
+
+      
+
+how to check how many group in my linux system ?
+in order to list the cat command you can exiccute command
+
+    cat /etc/group
+what is diffrent between ssh and telnet ?
+Telnet transfers the data in simple plain text. On other hand SSH uses Encrypted format to send data and also uses a secure channel
+   
+how will be adding user in to diffrent group
+usermod -a -G admin ammu
+what is the difference between sap and resin ?
+How To Check System Load in Linux
+ANS  uptime
+how to check process id of service 
+ ps -ef | grep nifi
+
+
+what is diffrent between etc/passwd file and etc/shadow fill ?
+
+/etc/passwd is used to store user information, such as name, shell, home directory, that sort of thing. /etc/shadow is where the user passwords are actually stored in a non-world readable, encrypted format
+OR etc/ shadow fill having user accout detail and  etc shadow fill user passwood detail with encription format 
+
+how to create passwood less ssh ?
+
+ssh-keygen
+ls -ltr
+two file is created id_rsa and id_rsa.pub
+
+fisrt 
+cat id_rsa.pub >> authorized_keys
+
+5)  chmod 700 ~/.ssh
+
+6 )  chmod 600 ~/.ssh/authorized_keys
+
+entry of the hosts file server 
+
+and than ssh is working fine
+
+
+
+how will wactch hidden file in linux system ?
+
+ls -a
+
+how to mount hard drive  ?
+type the command 
+lsblk
+parted /dev/xvdf
+mklable gpt
+unitGB
+mk part primary 0 10 GB
+quite
+fdisk i /dev/xvdf1
+mkfs.xfs dev/xvdf
+mount /dev/xvdf1/opt/
+show the har drive
+df -TH
+
+
+suppose i have one dns server  and i need to entry in my linux server what is command ?
+
+sudo vi /etc/hosts
+
+
+
+how will asign user to sudo pervillages ?  /  how will asing sudo role of user
+first we can edit visudo file and remove wheel #
+and  type the command usermode -a -G wheel ammu
+and  user add the wheel group
+oR
+first add the user in wheel group the command is usermod -a -G wheel and user name
+what is the diffrent between hive cli and beeline ?
+how to watch acl appled or node
+get acl status
+
+what is the diffrent between acl and chmode
+chmod we will uset to give the permisions on files or folders.. ACL to give permission on a file more than one group or users from diffrent groups and we can customise the permissions type
+what is diffent between hadoop 1.x or 2.x
+hadoop 1 task tracker and job if user submit a job job tracker job tracker asing job to tasktracker in the task tracker is only daimod process data it is boltle nake of 
+
+
+when we use ping command what is the backend portol backend ?
+
+   internet contorl massage portocol H
+
+how to add user on multiplegroup  ?
+usermode -a -G test ammu
+
+how to check my tom cat server or any server runnig or not ?
+ps -ef | grep tomcat
+
+chmod we will uset to give the permisions on files or folders.. ACL to give permission on a file more than one group or users from diffrent groups and we can customise the permissions type
+
+
+how would create hidden file in linux ?
+
+what is the full form for ssl tls?
+ssl for secure socit  layer
+traspot layer security
+
+how many instace wiil your organation compue capasity and all ?
+
+what is yarn ?
+yarn stand for et Another Resource Negotiator it was introduse hadoop 2 to remove 
+remove job botalnek job tracker yarn is data prosesng unit yarn have 4 component
+resurece manager node manager application master contener
+yarn is procesing unit of the colester
+yarn uses which shaduler?
+capacity shuduler
+
+what is the diffrent between capacity shuduler and fair  share shaduler ?
+
+capacity shoulder manitace sapret quee for small job to  star service as soon  as required as we are dividing cluster capacity large job take time 
+fair share shadular does not have  any requrirement to reserve capacity 
+what are the diffrent component in yarn ?s
+name node resouce manager appication master and contener
+yarn work flow ?
+
+suppose 2 jobs running in your cluster and stuck after somtime then what will you do?
+ANs: first we check the log and memory utilization and try to resolve it and if necessary them we will kill the job
+
+command to list down the jobs  yarn application -list 
+command to kill the jobs        yarn application -kill app id
+what is the port of RM           8088
+command to see the dfs used?     hdfs dfsadmin -report
+command to check the health of the cluster  hdfs fsck /
+command to list down the port of particuler services  netstat -anp | grep service name
+suppose my resouce manager gos down shall i submit a job ?
+no
+
+
+
+ 
+
+
+what is diffrent between acl and chowd is linux ?
+chown and chmod is  fille level or user level security and acl is user level security
+
+how would be check load averge in linux machene
+    
+       w
+
+what is perpose of zookeeper fillower ? 
+how will you kill zoombie process ?
+what is the port number name node 
+what is the port number ranger
+how will change ambari port number
+By default Ambari uses port 8080 for access to Ambari Web and the REST API. If you want to change the port number, you need to edit the Ambari properties file. Ambari Server should not be running when you do this: either make the edits before you start Ambari Server the first time or bring the server down to make the edits.
+expain hdfs arkitature 
+hdfs is two main daimod  namenode and data node
+how to fix job on underreplited job on hadoop closter ?
+
+how to list hdfs file system 
+hdfs dfs -ls /
+how will ad the user in hdfs ?
+how to create manuall check ponting ?  (time 2020 1 :37 ) checkpointing 
+       go to hdfs user 
+ANS    hdfs dfsadmin -safemode enter
+       hdfs dfsadmin -saveNamespace enter
+	   hdfs dfsadmin -safemode leave
+
+what is diffrent between beeline  and hive CLI ?  
+
+ The Hive CLI connects directly to the Hive Driver and requires that Hive be installed on the same machine as the client. ... Beeline is a thin client that also uses the Hive JDBC driver but instead executes queries through HiveServer2, which allows multiple concurrent client connections and supports authentication.
+
+
+what is diffalt permision of user  in linux ?
+700
+how to check one user how many group ?
+ id ammu
+
+how to check one user how many group in hadoop ?
+
+how to check health hadoop fill system
+hdfs dfs fsck /
+
+how to see currpted block
+hdfs dfs -list -currptblock file
+how to delect currpted block
+hdfs dfs fsck / delet
+h
+
+
+how would you created user hdfs in hadoop file system
+
+how would be genrate file sytem report?
+
+    hdfs dfs admin -report
+
+how file be impact on file syetem correped  and will be a file syetem halthy mood  and will be foundout this block are correped  and how wold be hality mood
+
+how can copy data one server to onothe server
+
+how to prereposit of kerberos
+
+how can create kerbaroos keytab
+
+how can create principal in kerbaroos cammond
+
+if a 10 node calster keytab all 10 node aue one node
+
+how can create ticket in kerbaros
+kint
+
+user ticket exper how to renew
+
+   cd /etc/security/keytab
+klist -kt hdfs.headlist.keytab
+   show principle
+klist -kt hdfs.headlist.keytab  and username
+
+which port karbaroos ruunig ?
+what is the diffrent between karbaroos and rangerr ?
+ranger is use for authorastion  and karbaroos is use for tickting bases authotication
+
+what is the diffrent between karbaroos and ranger ? 
+ldap is not for hadoop karbaroos is hadoop karbaroos is top; of hadoop 
+ldap is for network baseauthontication and karbaroos is use network base + file base authotication
+service user ( hive ) exper how to genrate it
+
+what  are the diffrent between fear shouler and yarn shoulder     (21 min )
+
+resoure manager have down how to impact the runnig job ?
+
+my namenode is safenode what is impact on my clostrer
+and how to live namenoe to save mode
+how will you create hdfs policy in ranger
+what is the diffrent between telnet and ssh
+
+how to commsnig and dicommicshing coloster 
+how to coloster HA
+
+how to kill any job yarn 
+closter configration
+
+
+suppose i have one vpc and number of server is inthe vpc and suddenly the vpc is not conncet to vpc how will be troble shoot
+
+how to install mysql server
+what is port number of yarn 
+8088
+
+suppose my ambari server is down then what happend to the running jobs.
+ambari is just monitrong server so noting impact of job
+what is the port of RNAGER and how to apply different policy?
+ranger port no is 6080 with the help of ranger ui you can add diffrent policy
+What is HA and how you configure it ?
+first go to hdfs action button enable high avalibliity select three jn jode 
+follow the wizard ha is asane
+
+How to check the ACL applied? Status ? 
+-getacl
+Hdfs dfs -getfacl
+Hdfs dfs -setfacl username :abdul permission:rwx: /file_name
+
+	Copying a file from one cluster to another cluster
+hadoop fs -distcp hdfs://namenodeA/dvs_hdfs/emp.csv hdfs://namenodeB/dvs_hdfs
+	
+how to see currpted block in hdfs
+hdfs dfs -list -curruped  block
+hdfs dfs fsck /delect
+
+. How do you takes users tickets in kerberos ?
+Ans;- kinit
+30. Where do keytabs is stored ?
+Ans /etc/krb5/krb5. keytab
+
+31. What are different configration file in kerberos?
+Ans:- kadmin, krb5.conf
+
+32. what is use of spingo keytab and haedless keytab ?
+
+33. Port no of kerberos?
+Anss:- 88
+
+34. Difference between LDAP and Kerberos.
+35. How do you integrate AD server with ranger ?
+ 

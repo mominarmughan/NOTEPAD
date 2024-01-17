@@ -1,0 +1,34 @@
+       YARN
+
+distributed data form yarn application
+
+data manage by yarn appition
+job shudoling and recouse managment isyarn application 
+
+
+map reduse is base on yarn
+
+
+
+     MASTER NODE AND SLEEVE NODE
+
+Task given by masternode 
+task taken by sleveen node
+
+
+meta data 
+meta data is all type of knowlege of fill like which part is store etc
+
+Data distribute is pareal 
+make a fill with block  
+
+map reduse 
+
+map reduse is a parpas of  starcure or no stature data 
+
+
+resouse managment
+app master
+resouse mananger is master
+name node is master of coloster
+Replica mean backup

@@ -1,0 +1,18 @@
+
+aws user permision
+sudo su
+make sure you can root
+adduser tahira
+ sudo vim /etc/ssh/sshd_config
+passwordauthitication yes
+
+/bin/systemctl restart sshd.service
+
+sudo service sshd status
+
+
+Aws sql is not allow to lauch instant
+Ubuntu Server 16.04 LTS (HVM) with SQL Server 2017 Standard 
+9 8 2019 45 min 
+
+centos 7 is 

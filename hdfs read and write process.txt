@@ -1,0 +1,14 @@
+expain hdfs architature
+hdfs work master salve architature
+name node as awork master and data data node as a slave
+name node store meta data and data node store actual data 
+if any file we can read clinet requires name node 
+hdfs divided data in block each block size 128 mb and by deafuly replication 3
+
+hdfs read process
+first clinet requiest namenode i read block A name node check which data node store Block A 
+after checking name node provided ip address of data node data node send to block to swich and clinet acces the data   
+
+write process
+
+first client requiest namenode i have write data block A name node check which data store is emty and after that he provided ip address of data node 

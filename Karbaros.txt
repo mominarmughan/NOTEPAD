@@ -1,0 +1,103 @@
+     
+
+         Karbaroos 
+
+is a security persase use
+
+Two type of data is available 
+(1)  file or directory   ( HDFS ACL)
+(2)   data bases
+
+karbaros is given ticket 
+keybase
+
+karbaros is given ticket is service user and normal user
+hadoop is by defult provided service user 
+(yarn hive tez ) etc    
+karberos is Network authentication protocol 
+
+install karbaros
+
+kadmin.local
+listprincs
+
+ammu@HADOOP.COM
+passwood bigdata
+
+vim /var/kerberos/krb5kdc/kdc.conf
+
+1:51 time
+
+listprincs
+addprinc admin
+klist
+kinit
+kdestroy
+
+service ticket
+cd /etc/security/keytabs/
+ls -ltr
+klist -kt hdfs.headless.keytab
+kinit -kt hdfs.headless.keytab hdfs-firdous@HADOOP.COM
+
+                                          Creating Ambari's Credential Store  1:20 
+
+To set up Ambari's credential store, the following commands must be invoked from the Ambari server host's command line:
+
+ambari-server setup-security  (option 2)
+masterkey bigdata 
+y
+
+sudo ls  -ltr  /var/lib/ambari-server/keys/credentials.jceks.
+echo $JAVA_HOME
+cd /usr/lib/jvm
+ls -ltr
+cd /jdk64/jdk1.8.0_60.
+
+cd bin
+sudo su
+key
+keytool -list /
+-keystore /var/lib/ambari-server/keys/credentials.jceks \
+
+-storetype JCEKS
+ passwood bigdata
+
+
+Restarting Ambari
+
+After this has been set up, Ambari must be restarted in order for it to acquire the new information about the credentials store. If Ambari was stopped before setting up the credential store, it must be started.
+
+ambari-server start
+If Ambari was not stopped before setting up the credential store, it must be restarted.
+
+ sudo ambari-server restart
+
+
+
+The following Java keytool "importpass" command is used to insert the credential into the credential store:
+make sure bin dirctory
+
+
+
+sudo keytool -importpass \
+-keystore /var/lib/ambari-server/keys/credentials.jceks \
+-storetype JCEKS \
+-alias cluster.armughan.kdc.admin.credential
+
+cat /var/kerberos/krb5kdc/kdc.conf
+klist
+cd /etc/security/keytabs/
+ klist -kt hdfs.headless.keytab momin@HADOOP.COM
+ kinit -kt  hdfs.headless.keytab hdfs-momin@HADOOP.COM
+klist
+
+
+
+ranger
+
+addr_country = 'US' 
+
+
+Warning:
+The JCEKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /var/lib/ambari-server/keys/credentials.jceks -destkeystore /var/lib/ambari-server/keys/credentials.jceks -deststoretype pkcs12".
